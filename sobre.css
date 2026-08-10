@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at center, #26004d 0%, #0b0015 45%, #020204 100%);
+
+    color: #fff;
+
+    font-family: 'Poppins', sans-serif;
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+.background-glow {
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at 20% 40%, rgba(153, 0, 255, .16), transparent 32%),
+        radial-gradient(circle at 80% 60%, rgba(128, 0, 255, .15), transparent 32%);
+
+    pointer-events: none;
+}
+
+.scanlines {
+    position: fixed;
+    inset: 0;
+
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,.02) 0,
+        rgba(255,255,255,.02) 1px,
+        transparent 1px,
+        transparent 4px
+    );
+
+    pointer-events: none;
+
+    z-index: 20;
+}
+
+
+/* =========================
+   CÓDIGOS LATERAIS
+========================= */
+
+.code-side {
+    position: fixed;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 260px;
+
+    font-family: 'Courier New', monospace;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    opacity: .55;
+
+    text-shadow: 0 0 8px currentColor;
+}
+
+.code-left {
+    left: 3%;
+}
+
+.code-right {
+    right: 3%;
+}
+
+.indent {
+    padding-left: 25px;
+}
+
+.purple {
+    color: #bc4cff;
+}
+
+.green {
+    color: #39ff14;
+}
+
+.yellow {
+    color: #ffe600;
+}
+
+.red {
+    color: #ff3b3b;
+}
+
+.blue {
+    color: #00c8ff;
+}
+
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.about-container {
+    width: min(950px, 88%);
+
+    margin: auto;
+
+    padding: 100px 0;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* CARD PRINCIPAL */
+
+.about-card,
+.instagram-card {
+
+    background: rgba(5, 5, 10, .70);
+
+    border: 1px solid rgba(185, 70, 255, .5);
+
+    box-shadow:
+        0 0 15px rgba(150, 0, 255, .25),
+        inset 0 0 25px rgba(150, 0, 255, .08);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.about-card {
+
+    padding: 55px;
+
+    margin-bottom: 55px;
+}
+
+
+.mini-title {
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #ba55ff;
+}
+
+
+.about-card h1 {
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: clamp(35px, 6vw, 65px);
+
+    margin: 15px 0 30px;
+
+    text-shadow:
+        0 0 10px rgba(186, 85, 255, .5);
+}
+
+
+.about-card p {
+
+    color: #d3d3d3;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 22px;
+}
+
+
+.quote {
+
+    margin-top: 40px;
+
+    border-left: 3px solid #a600ff;
+
+    padding: 15px 20px;
+
+    font-family: 'Orbitron', sans-serif;
+
+    color: #d79cff;
+
+    letter-spacing: 2px;
+
+    text-shadow: 0 0 10px #8c00ff;
+}
+
+
+/* =========================
+   INSTAGRAM
+========================= */
+
+.instagram-card {
+
+    padding: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+.instagram-icon {
+
+    width: 180px;
+
+    min-width: 180px;
+}
+
+
+.instagram-icon img {
+
+    width: 100%;
+
+    filter:
+        drop-shadow(0 0 10px #b100ff)
+        drop-shadow(0 0 20px rgba(177, 0, 255, .5));
+}
+
+
+.instagram-text h2 {
+
+    font-family: 'Orbitron', sans-serif;
+
+    margin: 12px 0 15px;
+
+    font-size: 28px;
+}
+
+
+.instagram-text p {
+
+    color: #cfcfcf;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+.instagram-btn {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border: 1px solid #b100ff;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    background: rgba(177, 0, 255, .12);
+
+    transition: .3s;
+}
+
+
+.instagram-btn:hover {
+
+    background: #8d00e6;
+
+    box-shadow:
+        0 0 15px #8d00e6,
+        0 0 30px rgba(141, 0, 230, .5);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 1250px) {
+
+    .code-side {
+        opacity: .15;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .code-side {
+        display: none;
+    }
+
+    .about-container {
+        width: 92%;
+        padding: 50px 0;
+    }
+
+    .about-card {
+        padding: 30px;
+    }
+
+    .instagram-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .instagram-icon {
+        width: 120px;
+        min-width: 120px;
+    }
+
+}
