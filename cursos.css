@@ -1,0 +1,557 @@
+/* ================================
+   GABRIEL TECH — CURSOS
+   RETRÔ / NEON / GAMER
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at center, #240046 0%, #0c0017 45%, #030305 100%);
+
+    color: #fff;
+
+    font-family: 'Orbitron', sans-serif;
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+
+/* ================================
+   FUNDO
+================================ */
+
+.background-glow {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 50% 40%, rgba(155, 0, 255, 0.18), transparent 35%),
+        radial-gradient(circle at 20% 80%, rgba(0, 200, 255, 0.08), transparent 25%);
+
+    z-index: 0;
+}
+
+.scanlines {
+    position: fixed;
+    inset: 0;
+
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,.025) 0px,
+        rgba(255,255,255,.025) 1px,
+        transparent 1px,
+        transparent 4px
+    );
+
+    pointer-events: none;
+
+    z-index: 20;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+.course-header {
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    padding-top: 55px;
+}
+
+.course-header span {
+    color: #c35cff;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+}
+
+.course-header h1 {
+    margin-top: 10px;
+
+    font-size: clamp(35px, 6vw, 70px);
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 8px #9d00ff,
+        0 0 20px rgba(157, 0, 255, .6);
+}
+
+.course-header p {
+    margin-top: 10px;
+
+    color: #a9a9a9;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ================================
+   PLAYER
+================================ */
+
+.course-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding-top: 55px;
+
+    padding-bottom: 80px;
+}
+
+.video-frame {
+    width: min(850px, 70vw);
+
+    padding: 8px;
+
+    background: #050509;
+
+    border: 2px solid #9d00ff;
+
+    box-shadow:
+        0 0 12px #9d00ff,
+        0 0 35px rgba(157, 0, 255, .65),
+        inset 0 0 20px rgba(157, 0, 255, .2);
+
+    border-radius: 6px;
+}
+
+.video-frame video {
+    display: block;
+
+    width: 100%;
+
+    max-height: 55vh;
+
+    background: #000;
+
+    object-fit: contain;
+}
+
+
+/* ================================
+   INFO DA AULA
+================================ */
+
+.lesson-info {
+    margin-top: 18px;
+
+    text-align: center;
+}
+
+.lesson-info span {
+    color: #b45cff;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+}
+
+.lesson-info h2 {
+    margin-top: 6px;
+
+    font-size: 22px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ================================
+   PNGs DECORATIVOS
+================================ */
+
+.decor {
+    position: fixed;
+
+    z-index: 6;
+
+    object-fit: contain;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(0 0 8px #9d00ff)
+        drop-shadow(0 0 20px rgba(157, 0, 255, .65));
+}
+
+
+/* GAMER */
+
+.gamer {
+    width: 180px;
+
+    top: 18%;
+
+    left: 5%;
+
+    animation: floating 4s ease-in-out infinite;
+}
+
+
+/* CÉREBRO */
+
+.cerebro {
+    width: 145px;
+
+    top: 16%;
+
+    right: 7%;
+
+    animation: floating 5s ease-in-out infinite;
+}
+
+
+/* CÂMERA */
+
+.camera {
+    width: 110px;
+
+    top: 48%;
+
+    right: 8%;
+
+    animation: floating 4.5s ease-in-out infinite;
+}
+
+
+/* CAFÉ */
+
+.cafe {
+    width: 135px;
+
+    bottom: 6%;
+
+    left: 6%;
+
+    animation: floating 5.5s ease-in-out infinite;
+}
+
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================================
+   CÓDIGO MOTIVACIONAL
+================================ */
+
+.motivational-code {
+    position: fixed;
+
+    right: 5%;
+
+    bottom: 4%;
+
+    z-index: 6;
+
+    font-family: 'Courier New', monospace;
+
+    font-size: clamp(10px, 0.85vw, 14px);
+
+    line-height: 1.45;
+
+    padding: 10px 14px;
+
+    color: white;
+
+    background: rgba(0,0,0,.22);
+
+    border-left: 2px solid #9d00ff;
+
+    text-shadow:
+        0 0 6px currentColor,
+        0 0 12px currentColor;
+}
+
+.indent {
+    padding-left: 25px;
+}
+
+.purple {
+    color: #c35cff;
+}
+
+.blue {
+    color: #00c8ff;
+}
+
+.green {
+    color: #39ff14;
+}
+
+.red {
+    color: #ff3c3c;
+}
+
+.white {
+    color: white;
+}
+
+.comment {
+    color: #9dff9d;
+}
+
+
+/* ================================
+   BOTÃO PRÓXIMA AULA — NEON GAMER
+================================ */
+
+.next-lesson {
+    position: relative;
+
+    margin-top: 28px;
+
+    padding: 16px 38px;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(90, 0, 140, 0.35),
+            rgba(20, 0, 35, 0.9)
+        );
+
+    border: 1px solid #c13cff;
+
+    clip-path: polygon(
+        10px 0,
+        100% 0,
+        100% calc(100% - 10px),
+        calc(100% - 10px) 100%,
+        0 100%,
+        0 10px
+    );
+
+    cursor: pointer;
+
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #c13cff;
+
+    box-shadow:
+        0 0 8px rgba(193, 60, 255, 0.7),
+        0 0 20px rgba(157, 0, 255, 0.35),
+        inset 0 0 15px rgba(193, 60, 255, 0.15);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.next-lesson::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 20%;
+
+    width: 60%;
+
+    height: 2px;
+
+    background: #e58cff;
+
+    box-shadow:
+        0 0 6px #d75cff,
+        0 0 14px #b100ff;
+}
+
+.next-lesson:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(174, 0, 255, 0.55),
+            rgba(40, 0, 65, 0.95)
+        );
+
+    box-shadow:
+        0 0 10px #c13cff,
+        0 0 25px rgba(193, 60, 255, 0.8),
+        0 0 45px rgba(128, 0, 255, 0.45),
+        inset 0 0 20px rgba(220, 100, 255, 0.2);
+}
+
+.next-lesson:active {
+    transform: scale(0.96);
+}
+
+.next-lesson:disabled {
+    opacity: 0.45;
+
+    cursor: default;
+
+    transform: none;
+}
+
+
+/* ================================
+   RESPONSIVO
+================================ */
+
+@media (max-width: 950px) {
+
+    .video-frame {
+        width: 88vw;
+    }
+
+    .decor {
+        opacity: .6;
+    }
+
+    .gamer {
+        width: 110px;
+    }
+
+    .cerebro {
+        width: 90px;
+    }
+
+    .camera {
+        width: 75px;
+    }
+
+    .cafe {
+        width: 90px;
+    }
+
+    .motivational-code {
+        font-size: 11px;
+
+        right: 3%;
+
+        bottom: 3%;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    .course-header {
+        padding-top: 30px;
+    }
+
+    .course-content {
+        padding-top: 35px;
+    }
+
+    .video-frame {
+        width: 92vw;
+    }
+
+    .decor {
+        opacity: .35;
+    }
+
+    .gamer {
+        width: 75px;
+
+        top: 12%;
+
+        left: 2%;
+    }
+
+    .cerebro {
+        width: 65px;
+
+        top: 12%;
+
+        right: 2%;
+    }
+
+    .camera {
+        width: 55px;
+
+        top: 52%;
+
+        right: 2%;
+    }
+
+    .cafe {
+        width: 70px;
+
+        bottom: 2%;
+
+        left: 3%;
+    }
+
+    .motivational-code {
+        position: relative;
+
+        right: auto;
+
+        bottom: auto;
+
+        width: 90%;
+
+        margin: 45px auto;
+
+        font-size: 11px;
+    }
+
+    .next-lesson {
+        padding: 14px 24px;
+
+        font-size: 10px;
+    }
+
+}
