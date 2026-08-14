@@ -222,12 +222,30 @@ nav a:hover{
 
 }
 
-.gif img{
+.gif img {
+    width: 220px;
+    max-width: 70vw;
 
-    width:90%;
-    max-width:850px;
-    border-radius:20px;
-    box-shadow:0 0 60px #7c3aed55;
+    filter:
+        drop-shadow(0 0 10px #9d00ff)
+        drop-shadow(0 0 25px rgba(157, 0, 255, 0.75));
+
+    animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(1deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
 
 }
 
