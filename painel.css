@@ -1,6 +1,7 @@
-/* ================================
-   GABRIEL TECH — PAINEL RETRÔ
-   ================================ */
+/* =========================================
+   GABRIEL TECH // PAINEL COMEÇAR
+   PRETO + ROXO NEON
+========================================= */
 
 * {
     margin: 0;
@@ -8,38 +9,44 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
+
     background:
-        radial-gradient(circle at center, #25004d 0%, #0b0014 45%, #030305 100%);
+        radial-gradient(circle at 50% 35%, #21003d 0%, #0b0014 42%, #020203 100%);
+
     color: white;
-    font-family: 'Orbitron', sans-serif;
-    overflow: hidden;
+
+    font-family: 'Poppins', sans-serif;
+
+    overflow-x: hidden;
+
     position: relative;
 }
 
 
-/* ================================
-   BRILHO DE FUNDO
-   ================================ */
+/* =========================================
+   FUNDO
+========================================= */
 
 .background-glow {
     position: fixed;
     inset: 0;
-    pointer-events: none;
 
     background:
-        radial-gradient(circle at 50% 50%,
-        rgba(160, 0, 255, 0.18),
-        transparent 45%);
+        radial-gradient(circle at 50% 45%, rgba(157, 0, 255, .16), transparent 36%),
+        radial-gradient(circle at 15% 80%, rgba(0, 200, 255, .05), transparent 25%),
+        radial-gradient(circle at 85% 20%, rgba(157, 0, 255, .06), transparent 25%);
+
+    pointer-events: none;
 
     z-index: 0;
 }
 
-
-/* ================================
-   EFEITO RETRÔ / SCANLINES
-   ================================ */
 
 .scanlines {
     position: fixed;
@@ -47,38 +54,103 @@ body {
 
     background: repeating-linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 0.025) 0px,
-        rgba(255, 255, 255, 0.025) 1px,
+        rgba(255,255,255,.018) 0px,
+        rgba(255,255,255,.018) 1px,
         transparent 1px,
         transparent 4px
     );
 
     pointer-events: none;
-    z-index: 20;
+
+    z-index: 50;
 }
 
 
-/* ================================
-   ÁREA DO VÍDEO
-   ================================ */
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
 
 .video-area {
     position: relative;
-    z-index: 5;
 
-    width: 100%;
-    height: 100vh;
+    z-index: 6;
+
+    width: min(1100px, 92%);
+
+    margin: 0 auto;
+
+    min-height: 100vh;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+    padding: 55px 0 90px;
 }
 
 
-/* Moldura neon */
+/* =========================================
+   TÍTULO
+========================================= */
+
+.page-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.page-title span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #c05cff;
+
+    text-shadow:
+        0 0 8px rgba(157,0,255,.55);
+}
+
+
+.page-title h1 {
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: clamp(38px, 6vw, 68px);
+
+    letter-spacing: 3px;
+
+    color: white;
+
+    text-shadow:
+        0 0 6px white,
+        0 0 16px #a900ff,
+        0 0 34px rgba(157,0,255,.65);
+}
+
+
+.page-title p {
+    margin-top: 10px;
+
+    color: #7c7c7c;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   PLAYER
+========================================= */
 
 .video-frame {
-    width: min(900px, 75vw);
+    width: min(850px, 74vw);
 
     padding: 8px;
 
@@ -86,176 +158,236 @@ body {
 
     border: 2px solid #9d00ff;
 
+    border-radius: 6px;
+
     box-shadow:
-        0 0 10px #9d00ff,
-        0 0 25px rgba(157, 0, 255, 0.8),
-        inset 0 0 20px rgba(157, 0, 255, 0.25);
+        0 0 12px #9d00ff,
+        0 0 35px rgba(157,0,255,.65),
+        inset 0 0 20px rgba(157,0,255,.2);
 
-    border-radius: 4px;
+    position: relative;
 }
 
 
-/* Vídeo */
+.video-frame::before {
+    content: "";
 
-.video-frame video {
-    display: block;
+    position: absolute;
 
-    width: 100%;
-    height: auto;
+    inset: -25px;
 
-    max-height: 70vh;
+    z-index: -1;
 
-    background: black;
+    background:
+        radial-gradient(
+            circle,
+            rgba(157,0,255,.16),
+            transparent 68%
+        );
 
-    object-fit: contain;
-}
-
-
-/* ================================
-   CÓDIGO DECORATIVO
-   ================================ */
-
-.code-decoration {
-    position: fixed;
-
-    left: 5%;
-    bottom: 8%;
-
-    z-index: 6;
-
-    font-family: 'Courier New', monospace;
-
-    font-size: clamp(14px, 1.3vw, 22px);
-
-    line-height: 1.7;
-
-    padding: 20px;
-
-    background: rgba(0, 0, 0, 0.35);
-
-    border-left: 2px solid #9d00ff;
-
-    text-shadow:
-        0 0 5px currentColor,
-        0 0 12px currentColor;
-
-    animation: codeGlow 3s ease-in-out infinite;
-}
-
-
-/* Cores */
-
-.red {
-    color: #ff3030;
-}
-
-.blue {
-    color: #00b7ff;
-}
-
-.green {
-    color: #39ff14;
-}
-
-.white {
-    color: #ffffff;
-}
-
-
-/* Espaçamento */
-
-.indent {
-    padding-left: 25px;
-}
-
-
-/* Animação */
-
-@keyframes codeGlow {
-
-    0% {
-        opacity: 0.75;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.75;
-    }
-
-}
-
-
-/* ================================
-   PNGs DECORATIVOS
-   ================================ */
-
-.decor {
-    position: fixed;
-
-    z-index: 7;
-
-    object-fit: contain;
-
-    filter:
-        drop-shadow(0 0 8px #9d00ff)
-        drop-shadow(0 0 18px rgba(157, 0, 255, 0.8));
+    filter: blur(12px);
 
     pointer-events: none;
 }
 
 
-/* Cursor */
+.video-frame video {
+    display: block;
+
+    width: 100%;
+
+    max-height: 55vh;
+
+    object-fit: contain;
+
+    background: #000;
+}
+
+
+/* =========================================
+   INFO ABAIXO
+========================================= */
+
+.lesson-info {
+    margin-top: 22px;
+
+    text-align: center;
+}
+
+
+.lesson-info span {
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #b85cff;
+}
+
+
+.lesson-info h2 {
+    margin-top: 7px;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 22px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 8px rgba(157,0,255,.35);
+}
+
+
+.lesson-info p {
+    margin-top: 8px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   BOTÃO CURSOS
+========================================= */
+
+.courses-button {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 26px;
+
+    min-height: 46px;
+
+    padding: 0 24px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(105, 0, 160, .88),
+            rgba(35, 0, 55, .96)
+        );
+
+    border: 1px solid #b943ef;
+
+    box-shadow:
+        0 0 10px rgba(157,0,255,.4),
+        inset 0 0 15px rgba(157,0,255,.1);
+
+    transition: .25s;
+
+    clip-path: polygon(
+        8px 0,
+        100% 0,
+        100% calc(100% - 8px),
+        calc(100% - 8px) 100%,
+        0 100%,
+        0 8px
+    );
+}
+
+
+.courses-button:hover {
+    transform: translateY(-3px);
+
+    background: #8e00ce;
+
+    box-shadow:
+        0 0 12px #9d00ff,
+        0 0 30px rgba(157,0,255,.55);
+}
+
+
+/* =========================================
+   PNGs DECORATIVOS
+========================================= */
+
+.decor {
+    position: fixed;
+
+    z-index: 4;
+
+    object-fit: contain;
+
+    pointer-events: none;
+
+    opacity: .78;
+
+    filter:
+        drop-shadow(0 0 8px rgba(157,0,255,.7))
+        drop-shadow(0 0 20px rgba(157,0,255,.35));
+
+    animation:
+        decorFloat 5s ease-in-out infinite;
+}
+
+
+/* CURSOR */
 
 .cursor {
-    width: 120px;
+    width: 95px;
 
-    top: 8%;
     left: 5%;
-
-    animation: floating 4s ease-in-out infinite;
+    top: 16%;
 }
 
 
-/* Wi-Fi */
+/* WI-FI */
 
 .wifi {
-    width: 170px;
+    width: 90px;
 
-    top: 7%;
-    right: 5%;
+    right: 6%;
+    top: 14%;
 
-    animation: floating 5s ease-in-out infinite;
+    animation-delay: -1s;
 }
 
 
-/* Computador */
+/* COMPUTADOR */
 
 .computador {
-    width: 180px;
+    width: 135px;
 
-    bottom: 5%;
-    right: 5%;
+    left: 5%;
+    bottom: 8%;
+
+    animation-delay: -2s;
 }
 
 
-/* Meme */
+/* MEME */
 
 .meme {
-    width: 160px;
+    width: 105px;
 
-    bottom: 6%;
-    left: 5%;
+    right: 7%;
+    top: 45%;
+
+    animation-delay: -3s;
 }
 
 
-/* Flutuação */
+@keyframes decorFloat {
 
-@keyframes floating {
-
-    0% {
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -263,46 +395,197 @@ body {
         transform: translateY(-12px);
     }
 
+}
+
+
+/* =========================================
+   CÓDIGOS LATERAIS
+========================================= */
+
+.code-box {
+    position: fixed;
+
+    z-index: 3;
+
+    width: 250px;
+
+    font-family: 'Courier New', monospace;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    color: #aaa;
+
+    opacity: .42;
+
+    pointer-events: none;
+
+    text-shadow:
+        0 0 6px rgba(157,0,255,.35);
+
+    animation:
+        codeFloat 7s ease-in-out infinite;
+}
+
+
+.code-left {
+    left: 3%;
+    top: 34%;
+}
+
+
+.code-right {
+    right: 3%;
+    bottom: 8%;
+
+    animation-delay: -3s;
+}
+
+
+.code-box .indent {
+    padding-left: 22px;
+}
+
+
+.red {
+    color: #ff5575;
+}
+
+
+.blue {
+    color: #4fdcff;
+}
+
+
+.green {
+    color: #5fff88;
+}
+
+
+.purple {
+    color: #d267ff;
+}
+
+
+.white {
+    color: #ffffff;
+}
+
+
+.comment {
+    color: #707070;
+}
+
+
+@keyframes codeFloat {
+
+    0%,
     100% {
         transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
     }
 
 }
 
 
-/* ================================
-   CELULAR / TELAS PEQUENAS
-   ================================ */
+/* =========================================
+   RESPONSIVO
+========================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
+
+    .code-box {
+        opacity: .16;
+    }
+
+    .decor {
+        opacity: .48;
+    }
+
+}
+
+
+@media (max-width: 900px) {
 
     .video-frame {
         width: 88vw;
     }
 
-    .code-decoration {
-        left: 3%;
-        bottom: 3%;
-
-        font-size: 11px;
-
-        padding: 10px;
-    }
-
-    .cursor {
-        width: 70px;
-    }
-
-    .wifi {
-        width: 90px;
+    .decor {
+        width: 75px;
     }
 
     .computador {
-        width: 100px;
+        width: 95px;
+    }
+
+    .code-box {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .video-area {
+        width: 94%;
+
+        padding-top: 35px;
+    }
+
+    .page-title h1 {
+        font-size: 38px;
+    }
+
+    .video-frame {
+        width: 92vw;
+    }
+
+    .decor {
+        opacity: .25;
+    }
+
+    .cursor {
+        width: 55px;
+
+        left: 2%;
+        top: 12%;
+    }
+
+    .wifi {
+        width: 55px;
+
+        right: 2%;
+        top: 12%;
+    }
+
+    .computador {
+        width: 70px;
+
+        left: 2%;
+        bottom: 3%;
     }
 
     .meme {
-        width: 90px;
+        width: 60px;
+
+        right: 2%;
+        top: 55%;
+    }
+
+    .lesson-info h2 {
+        font-size: 17px;
+    }
+
+    .courses-button {
+        padding: 0 18px;
+
+        font-size: 8px;
     }
 
 }

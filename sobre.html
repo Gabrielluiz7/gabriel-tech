@@ -2,94 +2,458 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Gabriel Tech | Sobre</title>
-    <link rel="icon" type="image/png" href="./img/favicon.png.png">
 
-    <link rel="stylesheet" href="sobre.css">
+    <link rel="icon"
+          type="image/png"
+          href="img/favicon.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="sobre.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
 </head>
 
+
 <body>
+
+    <!-- FUNDO -->
 
     <div class="background-glow"></div>
     <div class="scanlines"></div>
 
-    <!-- CÓDIGOS LATERAIS -->
 
-    <div class="code-side code-left">
+    <!-- MENU -->
 
-        <p><span class="purple">while</span> (dreams) {</p>
-        <p class="indent">keepGoing();</p>
-        <p>}</p>
+    <header class="topbar">
+
+        <a href="index.html"
+           class="logo">
+
+            GABRIEL TECH
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="cursos.html">
+                Cursos
+            </a>
+
+            <a href="sobre.html"
+               class="active">
+                Sobre
+            </a>
+
+            <a href="forum.html">
+                Fórum
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PNGs DECORATIVOS -->
+
+    <img
+        src="img/cafe.png.png"
+        class="decor decor-cafe"
+        alt="">
+
+    <img
+        src="img/computador.png.png"
+        class="decor decor-computador"
+        alt="">
+
+    <img
+        src="img/wifi.png.png"
+        class="decor decor-wifi"
+        alt="">
+
+    <img
+        src="img/notebook .png.png"
+        class="decor decor-notebook"
+        alt="">
+
+
+    <!-- CÓDIGO ESQUERDO -->
+
+    <div class="floating-code code-left">
+
+        <p>
+            name =
+            <span class="green">"Gabriel Luiz"</span>;
+        </p>
+
+        <p>
+            area =
+            <span class="purple">"TI"</span>;
+        </p>
+
+        <p>
+            focus =
+            <span class="green">true</span>;
+        </p>
 
         <br>
 
-        <p><span class="green">// Nunca desista</span></p>
-        <p><span class="green">// Never give up</span></p>
-
-        <br>
-
-        <p>focus = <span class="yellow">true</span>;</p>
-        <p>fear = <span class="red">false</span>;</p>
+        <p class="comment">
+            // Nunca pare de aprender.
+        </p>
 
     </div>
 
 
-    <div class="code-side code-right">
+    <!-- CÓDIGO DIREITO -->
 
-        <p><span class="blue">if</span> (life == difficult) {</p>
-        <p class="indent">persist();</p>
-        <p>}</p>
+    <div class="floating-code code-right">
+
+        <p>
+            knowledge++;
+        </p>
+
+        <p>
+            experience++;
+        </p>
+
+        <p>
+            giveUp =
+            <span class="red">false</span>;
+        </p>
 
         <br>
 
-        <p><span class="green">// Mantenha o foco</span></p>
-        <p><span class="green">// Stay focused</span></p>
-
-        <br>
-
-        <p>progress++;</p>
-        <p>giveUp = <span class="red">false</span>;</p>
+        <p class="comment">
+            // KEEP GOING.
+        </p>
 
     </div>
 
 
-    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- CONTEÚDO -->
 
-    <main class="about-container">
+    <main class="about-wrapper">
 
-        <section class="about-card">
 
-            <span class="mini-title">GABRIEL TECH // ABOUT ME</span>
+        <!-- CABEÇALHO -->
 
-            <h1>QUEM SOU EU?</h1>
+        <section class="about-header">
+
+            <span>
+                GABRIEL TECH // ABOUT
+            </span>
+
+            <h1>
+                SOBRE MIM
+            </h1>
 
             <p>
-                Meu nome é Gabriel e sou apaixonado por tecnologia,
-                infraestrutura, redes e tudo aquilo que envolve resolver
-                problemas na prática.
+                Conhecimento se constrói um passo de cada vez.
+            </p>
+
+        </section>
+
+
+        <!-- APRESENTAÇÃO -->
+
+        <section class="about-section">
+
+            <span class="section-number">
+                01 // WHO AM I?
+            </span>
+
+            <h2>
+                OLÁ, EU SOU O GABRIEL.
+            </h2>
+
+            <p>
+                Sou estudante de Ciência da Computação e atuo na área de
+                Tecnologia da Informação, com experiência prática em
+                suporte técnico, infraestrutura de redes, manutenção de
+                computadores e resolução de problemas do dia a dia.
             </p>
 
             <p>
-                Minha caminhada na área de TI é construída todos os dias
-                através de estudo, experiência e muita persistência.
-                Não acredito em atalhos ou promessas de sucesso rápido.
-                Acredito em evolução constante.
+                Minha rotina envolve diagnóstico de rede, configuração
+                de IP, DNS e Gateway, suporte a computadores e notebooks,
+                impressoras, scanners, instalação e configuração de
+                sistemas, manutenção do Windows e suporte aos usuários.
             </p>
 
             <p>
-                A Gabriel Tech nasceu com o objetivo de compartilhar
-                conhecimento de uma forma simples, prática e acessível,
-                principalmente para quem está começando e ainda não sabe
-                qual caminho seguir dentro da tecnologia.
+                Também trabalho com ferramentas de diagnóstico,
+                acesso remoto, configuração de equipamentos e diferentes
+                situações que fazem parte da rotina de quem trabalha
+                diretamente com tecnologia.
             </p>
+
+        </section>
+
+
+        <!-- TERMINAL -->
+
+        <section class="terminal">
+
+            <div class="terminal-top">
+
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+
+                <p>
+                    gabriel@tech:~$
+                </p>
+
+            </div>
+
+
+            <div class="terminal-content">
+
+                <p>
+                    <span class="purple">
+                        const
+                    </span>
+
+                    gabriel = {
+                </p>
+
+
+                <p class="indent">
+
+                    curso:
+                    <span class="green">
+                        "Ciência da Computação"
+                    </span>,
+
+                </p>
+
+
+                <p class="indent">
+
+                    area:
+                    <span class="green">
+                        "Tecnologia da Informação"
+                    </span>,
+
+                </p>
+
+
+                <p class="indent">
+
+                    especialidade:
+                    <span class="green">
+                        "Suporte + Infraestrutura"
+                    </span>,
+
+                </p>
+
+
+                <p class="indent">
+
+                    learning:
+                    <span class="purple">
+                        true
+                    </span>,
+
+                </p>
+
+
+                <p class="indent">
+
+                    giveUp:
+                    <span class="red">
+                        false
+                    </span>
+
+                </p>
+
+
+                <p>
+                    };
+                </p>
+
+
+                <br>
+
+
+                <p class="comment">
+                    // Continue aprendendo.
+                </p>
+
+                <p class="comment">
+                    // Continue evoluindo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPERIÊNCIA -->
+
+        <section class="about-section">
+
+            <span class="section-number">
+                02 // EXPERIENCE
+            </span>
+
+            <h2>
+                EXPERIÊNCIA NA PRÁTICA.
+            </h2>
+
+            <p>
+                Tecnologia não se aprende apenas lendo.
+                Grande parte do conhecimento vem quando aparece um
+                problema real e você precisa descobrir o que está
+                acontecendo.
+            </p>
+
+
+            <div class="skills-grid">
+
+
+                <div class="skill-card">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        REDES
+                    </h3>
+
+                    <p>
+                        IP, DNS, Gateway, DHCP, Wi-Fi,
+                        Ethernet, testes de conectividade,
+                        latência e diagnóstico de rede.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        WINDOWS
+                    </h3>
+
+                    <p>
+                        Instalação, formatação, recuperação,
+                        drivers, manutenção, comandos e
+                        solução de problemas.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        SUPORTE
+                    </h3>
+
+                    <p>
+                        Atendimento aos usuários,
+                        notebooks, impressoras, scanners,
+                        acesso remoto e troubleshooting.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        INFRAESTRUTURA
+                    </h3>
+
+                    <p>
+                        Equipamentos, conectividade,
+                        sistemas, organização e suporte
+                        ao ambiente de TI.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- GABRIEL TECH -->
+
+        <section class="about-section">
+
+            <span class="section-number">
+                03 // THE PROJECT
+            </span>
+
+            <h2>
+                POR QUE CRIEI A GABRIEL TECH?
+            </h2>
+
+            <p>
+                A Gabriel Tech nasceu da vontade de compartilhar aquilo
+                que aprendo trabalhando e estudando tecnologia.
+            </p>
+
+            <p>
+                A proposta é criar conteúdos simples e objetivos,
+                principalmente para quem está começando e às vezes
+                encontra explicações complicadas demais para coisas
+                que poderiam ser ensinadas de forma muito mais direta.
+            </p>
+
+            <p>
+                Não existe promessa de aprender tudo rapidamente.
+                A ideia aqui é estudar, praticar, errar, entender
+                o problema e continuar evoluindo.
+            </p>
+
 
             <div class="quote">
-                “FOCO. PERSISTÊNCIA. EVOLUÇÃO.”
+
+                <span>
+                    &lt;MESSAGE&gt;
+                </span>
+
+                <h3>
+                    NUNCA DESISTA.<br>
+                    MANTENHA O FOCO.
+                </h3>
+
+                <p>
+                    NEVER GIVE UP.<br>
+                    KEEP YOUR FOCUS.
+                </p>
+
             </div>
 
         </section>
@@ -97,39 +461,56 @@
 
         <!-- INSTAGRAM -->
 
-        <section class="instagram-card">
+        <section class="social-section">
 
-            <div class="instagram-icon">
+            <span>
+                04 // SOCIAL
+            </span>
 
-                <!-- TROQUE PELO NOME REAL DO SEU PNG -->
-                <img src="img/insta.png.png" alt="Instagram">
+            <h2>
+                ME ACOMPANHE NO INSTAGRAM.
+            </h2>
 
-            </div>
+            <p>
+                Conteúdos, rotina, tecnologia e novidades
+                da Gabriel Tech.
+            </p>
 
-            <div class="instagram-text">
 
-                <span class="mini-title">FOLLOW THE JOURNEY</span>
+            <!-- COLOQUE SEU LINK ANTIGO AQUI -->
 
-                <h2>ACOMPANHE MINHA ROTINA</h2>
+            <a
+    href="https://www.instagram.com/gabriiell_lluiz/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="instagram-button">
 
-                <p>
-                    Se você quiser acompanhar mais de perto minha história,
-                    minha rotina, estudos, projetos, tecnologia e um pouco
-                    dos bastidores da Gabriel Tech, me siga no Instagram.
-                </p>
+                <span class="instagram-icon">
+                    ◎
+                </span>
 
-                <a href="https://www.instagram.com/gabriiell_lluiz/"
-   class="instagram-btn"
-   target="_blank"
-   rel="noopener noreferrer">
-    SEGUIR NO INSTAGRAM
-</a>
+                INSTAGRAM
 
-            </div>
+            </a>
 
         </section>
 
     </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <span>
+            GABRIEL TECH // NEVER GIVE UP
+        </span>
+
+        <p>
+            © 2026 Gabriel Tech
+        </p>
+
+    </footer>
 
 </body>
 

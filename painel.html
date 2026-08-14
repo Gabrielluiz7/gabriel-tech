@@ -5,26 +5,31 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Gabriel Tech | Curso</title>
-   <link rel="icon" type="image/png" href="img/favicon.png.png">
+    <title>Gabriel Tech | Começar</title>
 
-    <link rel="stylesheet" href="painel.css">
+    <link rel="icon"
+          type="image/png"
+          href="img/favicon.png">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet"
+          href="painel.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
 
 </head>
 
+
 <body>
 
-    <!-- EFEITOS DE FUNDO -->
 
-    <div class="scanlines"></div>
+    <!-- FUNDO -->
 
     <div class="background-glow"></div>
+    <div class="scanlines"></div>
 
 
     <!-- =========================
@@ -34,150 +39,176 @@
     <img
         src="img/cursor.png.png"
         class="decor cursor"
-        alt="Cursor neon"
-    >
+        alt="Cursor neon">
+
 
     <img
         src="img/wifi.png.png"
         class="decor wifi"
-        alt="Wi-Fi"
-    >
+        alt="Wi-Fi">
+
 
     <img
         src="img/computador.png.png"
         class="decor computador"
-        alt="Computador"
-    >
+        alt="Computador">
+
 
     <img
         src="img/meme.png.png"
         class="decor meme"
-        alt="Imagem decorativa"
-    >
+        alt="">
 
 
     <!-- =========================
-         CÓDIGO DECORATIVO
+         CÓDIGOS
     ========================== -->
 
-    <div class="code-decoration">
+    <div class="code-box code-left">
 
-        <div class="code-line">
-
+        <p>
             <span class="red">if</span>
+            <span class="blue">(Mood == </span>
+            <span class="green">Happy</span>
+            <span class="blue">)</span>
+        </p>
 
-            <span class="blue">
-                (Mood ==
-            </span>
+        <p>
+            <span class="white">{</span>
+        </p>
 
-            <span class="green">
-                Happy
-            </span>
+        <p class="indent">
+            <span class="red">Food</span>
+            <span class="white"> = </span>
+            <span class="green">Pizza</span>
+            <span class="white">;</span>
+        </p>
 
-            <span class="blue">
-                )
-            </span>
+        <p class="indent">
+            <span class="red">Drink</span>
+            <span class="white"> = </span>
+            <span class="green">Café</span>
+            <span class="white">;</span>
+        </p>
 
-        </div>
+        <p class="indent">
+            <span class="red">Music</span>
+            <span class="white"> = </span>
+            <span class="green">Heavy Metal</span>
+            <span class="white">;</span>
+        </p>
 
+        <p>
+            <span class="white">}</span>
+        </p>
 
-        <div class="code-line">
-
-            <span class="white">
-                {
-            </span>
-
-        </div>
-
-
-        <div class="code-line indent">
-
-            <span class="red">
-                Food
-            </span>
-
-            <span class="white">
-                =
-            </span>
-
-            <span class="green">
-                Pizza
-            </span>
-
-            <span class="white">
-                ;
-            </span>
-
-        </div>
+    </div>
 
 
-        <div class="code-line indent">
+    <div class="code-box code-right">
 
-            <span class="red">
-                Drink
-            </span>
+        <p>
+            focus =
+            <span class="green">true</span>;
+        </p>
 
-            <span class="white">
-                =
-            </span>
+        <p>
+            giveUp =
+            <span class="red">false</span>;
+        </p>
 
-            <span class="green">
-                Café
-            </span>
+        <br>
 
-            <span class="white">
-                ;
-            </span>
+        <p>
+            <span class="purple">while</span> (alive) {
+        </p>
 
-        </div>
+        <p class="indent">
+            learn();
+        </p>
 
+        <p class="indent">
+            practice();
+        </p>
 
-        <div class="code-line indent">
+        <p class="indent">
+            evolve();
+        </p>
 
-            <span class="red">
-                Music
-            </span>
+        <p>}</p>
 
-            <span class="white">
-                =
-            </span>
+        <br>
 
-            <span class="green">
-                Heavy Metal
-            </span>
-
-            <span class="white">
-                ;
-            </span>
-
-        </div>
-
-
-        <div class="code-line">
-
-            <span class="white">
-                }
-            </span>
-
-        </div>
+        <p class="comment">
+            // NEVER GIVE UP.
+        </p>
 
     </div>
 
 
     <!-- =========================
-         ÁREA DO VÍDEO
+         CONTEÚDO PRINCIPAL
     ========================== -->
 
     <main class="video-area">
 
-        <div class="video-frame">
+        <div class="page-title">
 
-<video controls preload="metadata">
-    <source src="videos/introducao.mp4.mp4" type="video/mp4">
-    Seu navegador não suporta reprodução de vídeo.
-</video>
+            <span>
+                GABRIEL TECH // START
+            </span>
+
+            <h1>
+                INTRODUÇÃO
+            </h1>
+
+            <p>
+                Comece sua jornada.
+            </p>
 
         </div>
+
+
+        <!-- PLAYER -->
+
+     <div class="video-frame">
+
+    <video controls preload="metadata">
+
+        <source
+            src="video/introducao.mp4.mp4"
+            type="video/mp4">
+
+        Seu navegador não suporta reprodução de vídeo.
+
+    </video>
+
+</div>
+        <!-- TEXTO ABAIXO -->
+
+        <div class="lesson-info">
+
+            <span>
+                START // 01
+            </span>
+
+            <h2>
+                BEM-VINDO À GABRIEL TECH
+            </h2>
+
+            <p>
+                Foco. Persistência. Evolução.
+            </p>
+
+        </div>
+
+
+        <a href="cursos.html"
+           class="courses-button">
+
+            IR PARA OS CURSOS →
+
+        </a>
 
     </main>
 

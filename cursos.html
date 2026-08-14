@@ -2,133 +2,470 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Gabriel Tech | Cursos</title>
-    <link rel="icon" type="image/png" href="img/favicon.png.png">
 
-    <link rel="stylesheet" href="cursos.css">
+    <link rel="icon"
+          type="image/png"
+          href="img/favicon.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="cursos.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
 </head>
 
+
 <body>
+
+    <!-- FUNDO -->
 
     <div class="background-glow"></div>
     <div class="scanlines"></div>
 
-    <!-- PNGs DECORATIVOS -->
 
-    <img src="img/gamer.png.png" class="decor gamer" alt="Gamer">
+    <!-- MENU -->
 
-    <img src="img/cerebro.png.png" class="decor cerebro" alt="Cérebro">
+    <header class="topbar">
 
-    <img src="img/camera.png.png" class="decor camera" alt="Câmera">
+        <a href="index.html"
+           class="logo">
 
-    <img src="img/cafe.png.png" class="decor cafe" alt="Café">
+            GABRIEL TECH
 
+        </a>
 
-    <!-- TÍTULO -->
+        <nav>
 
-    <header class="course-header">
+            <a href="index.html">
+                Home
+            </a>
 
-        <span>GABRIEL TECH // COURSES</span>
+            <a href="cursos.html"
+               class="active">
+                Cursos
+            </a>
 
-        <h1>VIDEOAULAS</h1>
+            <a href="sobre.html">
+                Sobre
+            </a>
 
-        <p>
-            Conhecimento, prática e evolução.
-        </p>
+            <a href="forum.html">
+                Fórum
+            </a>
+
+        </nav>
 
     </header>
 
 
-    <!-- PLAYER -->
+    <!-- =========================
+         PNGs DECORATIVOS
+    ========================== -->
 
-    <main class="course-content">
+    <img
+        src="img/cafe.png.png"
+        class="decor decor-cafe"
+        alt="">
 
-        <div class="video-frame">
+    <img
+        src="img/computador.png.png"
+        class="decor decor-computador"
+        alt="">
 
-            <video id="courseVideo" controls>
+    <img
+        src="img/notebook .png.png"
+        class="decor decor-notebook"
+        alt="">
 
-                <source src="videos/aula1.mp4" type="video/mp4">
+    <img
+        src="img/wifi.png.png"
+        class="decor decor-wifi"
+        alt="">
 
-                Seu navegador não suporta reprodução de vídeo.
+    <img
+        src="img/meme.png.png"
+        class="decor decor-meme"
+        alt="">
 
-            </video>
+    <img
+        src="img/cerebro.png.png"
+        class="decor decor-cerebro"
+        alt="">
 
-        </div>
 
-        <div class="lesson-info">
+    <!-- =========================
+         CÓDIGOS DECORATIVOS
+    ========================== -->
 
-            <span>AULA 01</span>
+    <div class="side-code code-left">
 
-            <h2>INTRODUÇÃO</h2>
+        <p>
+            <span class="purple">while</span> (alive) {
+        </p>
 
-        </div>
-        <button class="next-lesson" id="nextLesson">
-    PRÓXIMA AULA →
-</button>
+        <p class="indent">
+            <span class="green">learn</span>();
+        </p>
+
+        <p class="indent">
+            <span class="green">practice</span>();
+        </p>
+
+        <p class="indent">
+            <span class="green">evolve</span>();
+        </p>
+
+        <p>}</p>
+
+        <br>
+
+        <p class="comment">
+            // Nunca desista.
+        </p>
+
+        <p class="comment">
+            // Never give up.
+        </p>
+
+    </div>
+
+
+    <div class="side-code code-right">
+
+        <p>
+            knowledge++;
+        </p>
+
+        <p>
+            experience++;
+        </p>
+
+        <p>
+            focus =
+            <span class="green">true</span>;
+        </p>
+
+        <p>
+            giveUp =
+            <span class="red">false</span>;
+        </p>
+
+        <br>
+
+        <p class="comment">
+            // ONE STEP AT A TIME.
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main class="courses-wrapper">
+
+
+        <!-- CABEÇALHO -->
+
+        <section class="courses-header">
+
+            <span>
+                GABRIEL TECH // COURSES
+            </span>
+
+            <h1>
+                VIDEOAULAS
+            </h1>
+
+            <p>
+                Conteúdo direto, prático e sem enrolação.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             PAINEL DAS AULAS
+        ========================== -->
+
+        <section class="course-panel">
+
+
+            <!-- LATERAL -->
+
+            <aside class="lesson-sidebar">
+
+                <span class="sidebar-title">
+                    AULAS
+                </span>
+
+
+                <button
+                    class="lesson active"
+                    data-lesson="1">
+
+                    <small>
+                        01 //
+                    </small>
+
+                    AULA 01
+
+                </button>
+
+
+                <button
+                    class="lesson"
+                    data-lesson="2">
+
+                    <small>
+                        02 //
+                    </small>
+
+                    AULA 02
+
+                </button>
+
+
+                <button
+                    class="lesson"
+                    data-lesson="3">
+
+                    <small>
+                        03 //
+                    </small>
+
+                    AULA 03
+
+                </button>
+
+
+                <button
+                    class="lesson"
+                    data-lesson="4">
+
+                    <small>
+                        04 //
+                    </small>
+
+                    AULA 04
+
+                </button>
+
+
+                <button
+                    class="lesson"
+                    data-lesson="5">
+
+                    <small>
+                        05 //
+                    </small>
+
+                    AULA 05
+
+                </button>
+
+
+                <button
+                    class="lesson"
+                    data-lesson="6">
+
+                    <small>
+                        06 //
+                    </small>
+
+                    AULA 06
+
+                </button>
+
+
+                <button
+                    class="lesson"
+                    data-lesson="7">
+
+                    <small>
+                        07 //
+                    </small>
+
+                    AULA 07
+
+                </button>
+
+
+                <button
+                    class="lesson"
+                    data-lesson="8">
+
+                    <small>
+                        08 //
+                    </small>
+
+                    AULA 08
+
+                </button>
+
+            </aside>
+
+
+            <!-- CONTEÚDO DA AULA -->
+
+            <section class="lesson-content">
+
+
+                <!-- TOPO -->
+
+                <div class="lesson-top">
+
+                    <div>
+
+                        <span id="lessonNumber">
+                            AULA 01
+                        </span>
+
+                        <h2 id="lessonTitle">
+                            NOVA AULA EM BREVE
+                        </h2>
+
+                    </div>
+
+
+                    <div class="online">
+                        ● ONLINE
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     ÁREA DO VÍDEO
+                ========================== -->
+
+                <div class="lesson-video">
+
+                    <div
+                        class="video-placeholder"
+                        id="videoPlaceholder">
+
+                        <span>
+                            &gt;_
+                        </span>
+
+                        <h3>
+                            AULA EM PRODUÇÃO
+                        </h3>
+
+                        <p>
+                            O próximo conteúdo será disponibilizado em breve.
+                        </p>
+
+                    </div>
+
+
+                    <video
+                        id="lessonVideo"
+                        controls
+                        preload="metadata"
+                        style="display: none;">
+
+                        <source
+                            id="lessonVideoSource"
+                            src=""
+                            type="video/mp4">
+
+                        Seu navegador não suporta reprodução de vídeo.
+
+                    </video>
+
+                </div>
+
+
+                <!-- =========================
+                     DESCRIÇÃO
+                ========================== -->
+
+                <div class="lesson-description">
+
+                    <p id="lessonDescription">
+
+                        Esta aula ainda está sendo preparada.
+
+                        Assim que o conteúdo estiver pronto,
+                        ele ficará disponível aqui.
+
+                    </p>
+
+
+                    <div class="lesson-code">
+
+                        <span>
+                            >
+                        </span>
+
+                        focus();
+
+                        <br>
+
+                        <span>
+                            >
+                        </span>
+
+                        practice();
+
+                        <br>
+
+                        <span>
+                            >
+                        </span>
+
+                        keepGoing();
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     NAVEGAÇÃO
+                ========================== -->
+
+                <div class="lesson-navigation">
+
+                    <button
+                        class="previous"
+                        id="previousLesson">
+
+                        ← AULA ANTERIOR
+
+                    </button>
+
+
+                    <button
+                        class="next"
+                        id="nextLesson">
+
+                        PRÓXIMA AULA →
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </section>
 
     </main>
 
 
-    <!-- CÓDIGO MOTIVACIONAL -->
+    <script src="cursos.js"></script>
 
-    <div class="motivational-code">
-
-        <div>
-            <span class="purple">while</span>
-            <span class="white">(</span>
-            <span class="blue">studying</span>
-            <span class="white">) {</span>
-        </div>
-
-        <div class="indent">
-            <span class="green">learn</span><span class="white">();</span>
-        </div>
-
-        <div class="indent">
-            <span class="green">practice</span><span class="white">();</span>
-        </div>
-
-        <div class="indent">
-            <span class="green">evolve</span><span class="white">();</span>
-        </div>
-
-        <div>
-            <span class="white">}</span>
-        </div>
-
-        <br>
-
-        <div>
-            <span class="blue">focus</span>
-            <span class="white"> = </span>
-            <span class="green">true</span><span class="white">;</span>
-        </div>
-
-        <div>
-            <span class="blue">discipline</span>
-            <span class="white"> = </span>
-            <span class="green">true</span><span class="white">;</span>
-        </div>
-
-        <div>
-            <span class="red">giveUp</span>
-            <span class="white"> = </span>
-            <span class="red">false</span><span class="white">;</span>
-        </div>
-
-        <br>
-
-        <div class="comment">// Nunca desista.</div>
-        <div class="comment">// Mantenha o foco.</div>
-        <div class="comment">// Estude. Pratique. Evolua.</div>
-
-    </div>
-<script src="cursos.js"></script>
 </body>
 
 </html>
