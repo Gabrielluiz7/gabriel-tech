@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Gabriel Tech | Login</title>
+
+    <!-- FAVICON -->
+    <link rel="icon"
+          type="image/png"
+          href="img/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="login.css">
+
+    <!-- FONTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <div class="background-glow"></div>
+    <div class="scanlines"></div>
+
+
+    <!-- MENU -->
+
+    <header class="topbar">
+
+        <a href="index.html"
+           class="logo">
+
+            GABRIEL TECH
+
+        </a>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="cursos.html">
+                Cursos
+            </a>
+
+            <a href="sobre.html">
+                Sobre
+            </a>
+
+            <a href="forum.html">
+                Fórum
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CÓDIGOS DECORATIVOS -->
+
+    <div class="login-code code-left">
+
+        <p>
+            user =
+            <span class="purple">
+                unknown
+            </span>;
+        </p>
+
+        <p>
+            access =
+            <span class="red">
+                denied
+            </span>;
+        </p>
+
+        <br>
+
+        <p class="comment">
+            // Faça login.
+        </p>
+
+    </div>
+
+
+    <div class="login-code code-right">
+
+        <p>
+            authenticated =
+            <span class="green">
+                true
+            </span>;
+        </p>
+
+        <p>
+            community =
+            <span class="green">
+                unlocked
+            </span>;
+        </p>
+
+        <br>
+
+        <p class="comment">
+            // WELCOME BACK.
+        </p>
+
+    </div>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="login-wrapper">
+
+        <section class="login-panel">
+
+            <div class="login-header">
+
+                <span>
+                    GABRIEL TECH // ACCESS
+                </span>
+
+                <h1>
+                    LOGIN
+                </h1>
+
+                <p>
+                    Entre na sua conta para participar da comunidade.
+                </p>
+
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <form id="loginForm"
+                  class="auth-form">
+
+                <label for="loginEmail">
+                    E-MAIL
+                </label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="seuemail@email.com"
+                    autocomplete="email"
+                    required>
+
+
+                <label for="loginPassword">
+                    SENHA
+                </label>
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                    required>
+
+
+                <button
+                    type="submit"
+                    class="primary-button">
+
+                    ENTRAR →
+
+                </button>
+
+            </form>
+
+
+            <!-- STATUS -->
+
+            <div
+                class="auth-message"
+                id="authMessage">
+            </div>
+
+
+            <!-- DIVISOR -->
+
+            <div class="auth-divider">
+
+                <span></span>
+
+                <p>
+                    OU
+                </p>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- CRIAR CONTA -->
+
+            <button
+                type="button"
+                class="secondary-button"
+                id="showRegister">
+
+                CRIAR CONTA
+
+            </button>
+
+
+            <!-- CADASTRO -->
+
+            <form
+                id="registerForm"
+                class="auth-form register-form">
+
+                <label for="registerName">
+                    NOME
+                </label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Como você quer ser chamado?"
+                    autocomplete="name"
+                    maxlength="40"
+                    required>
+
+
+                <label for="registerEmail">
+                    E-MAIL
+                </label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="seuemail@email.com"
+                    autocomplete="email"
+                    required>
+
+
+                <label for="registerPassword">
+                    SENHA
+                </label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Crie uma senha"
+                    autocomplete="new-password"
+                    minlength="6"
+                    required>
+
+
+                <button
+                    type="submit"
+                    class="primary-button">
+
+                    CRIAR MINHA CONTA →
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="back-button"
+                    id="backToLogin">
+
+                    ← VOLTAR AO LOGIN
+
+                </button>
+
+            </form>
+
+
+            <!-- VOLTAR -->
+
+            <a
+                href="forum.html"
+                class="forum-link">
+
+                ← VOLTAR AO FÓRUM
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="login.js">
+    </script>
+
+</body>
+
+</html>
