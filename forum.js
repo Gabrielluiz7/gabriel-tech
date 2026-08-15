@@ -13,10 +13,10 @@ import { initializeApp } from
 
 import {
     getAuth,
-    onAuthStateChanged
+    onAuthStateChanged,
+    signOut
 } from
     "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
-
 import {
     getFirestore,
     collection,
@@ -100,6 +100,12 @@ const stickerPanel =
 const stickers =
     document.querySelectorAll(".sticker");
 
+    const currentUserName =
+    document.getElementById("currentUserName");
+
+const authButton =
+    document.getElementById("authButton");
+
 
 // ==========================================================
 // USUÁRIO ATUAL
@@ -122,10 +128,18 @@ onAuthStateChanged(
 
         if (user) {
 
-            console.log(
-                "Usuário conectado:",
-                user.email
-            );
+            const userName =
+                user.displayName ||
+                user.email?.split("@")[0] ||
+                "Usuário";
+
+
+            currentUserName.textContent =
+                "👾 " + userName;
+
+
+            authButton.textContent =
+                "SAIR";
 
 
             messageInput.disabled = false;
@@ -147,9 +161,12 @@ onAuthStateChanged(
 
         else {
 
-            console.log(
-                "Nenhum usuário autenticado."
-            );
+            currentUserName.textContent =
+                "VISITANTE";
+
+
+            authButton.textContent =
+                "ENTRAR";
 
 
             messageInput.disabled = true;
@@ -168,39 +185,6 @@ onAuthStateChanged(
 
     }
 );
-
-
-// ==========================================================
-// PEGAR NOME DO USUÁRIO
-// ==========================================================
-
-function getUserName() {
-
-    if (!currentUser) {
-
-        return "Usuário";
-
-    }
-
-
-    if (currentUser.displayName) {
-
-        return currentUser.displayName;
-
-    }
-
-
-    if (currentUser.email) {
-
-        return currentUser.email
-            .split("@")[0];
-
-    }
-
-
-    return "Usuário";
-
-}
 
 
 // ==========================================================
@@ -818,7 +802,45 @@ openStickers.disabled = true;
 messageInput.placeholder =
     "Verificando login...";
 
+// ==========================================
+// ENTRAR / SAIR
+// ==========================================
 
+authButton.addEventListener(
+    "click",
+
+    async () => {
+
+        if (currentUser) {
+
+            try {
+
+                await signOut(auth);
+
+                window.location.reload();
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    "Erro ao sair:",
+                    error
+                );
+
+            }
+
+        }
+
+        else {
+
+            window.location.href =
+                "login.html";
+
+        }
+
+    }
+);
 console.log(
     "Gabriel Tech // Firebase iniciado."
 );

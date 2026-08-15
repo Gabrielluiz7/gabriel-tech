@@ -1082,3 +1082,61 @@ body {
     }
 
 }
+/* =========================================
+   USUÁRIO LOGADO / SAIR
+========================================= */
+
+.chat-user-area {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+#currentUserName {
+    color: #d16cff;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px rgba(157,0,255,.45);
+}
+
+#authButton {
+    min-height: 34px;
+
+    padding: 0 14px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4d0072,
+            #7900ad
+        );
+
+    border:
+        1px solid #ba4deb;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+#authButton:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 12px rgba(157,0,255,.45);
+}
