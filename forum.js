@@ -470,7 +470,26 @@ function loadMessages() {
 // ==========================================================
 // SALVAR TEXTO NO FIRESTORE
 // ==========================================================
+// ==========================================================
+// PEGAR NOME DO USUÁRIO
+// ==========================================================
 
+function getUserName() {
+
+    if (!currentUser) {
+        return "Usuário";
+    }
+
+    if (currentUser.displayName) {
+        return currentUser.displayName;
+    }
+
+    if (currentUser.email) {
+        return currentUser.email.split("@")[0];
+    }
+
+    return "Usuário";
+}
 async function sendMessage() {
 
     if (!currentUser) {
