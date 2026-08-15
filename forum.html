@@ -7,29 +7,28 @@
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+        content="width=device-width, initial-scale=1.0">
 
     <title>Gabriel Tech | Fórum</title>
+
 
     <!-- FAVICON -->
     <link
         rel="icon"
         type="image/png"
-        href="img/favicon.png"
-    >
+        href="img/favicon.png">
+
 
     <!-- FONTES -->
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
+
 
     <!-- CSS -->
     <link
         rel="stylesheet"
-        href="forum.css"
-    >
+        href="forum.css">
 
 </head>
 
@@ -48,7 +47,50 @@
 
 
     <!-- =====================================================
-         PNGs DECORATIVOS // ESQUERDA
+         MENU SUPERIOR
+    ====================================================== -->
+
+    <header class="topbar">
+
+        <a
+            href="index.html"
+            class="logo">
+
+            GABRIEL TECH
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="cursos.html">
+                Cursos
+            </a>
+
+            <a href="sobre.html">
+                Sobre
+            </a>
+
+            <a
+                href="forum.html"
+                class="active">
+
+                Fórum
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PNGs // ESQUERDA
          8 PNGs
     ====================================================== -->
 
@@ -57,57 +99,49 @@
         <img
             src="img/cafe.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/computador.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/meme.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/wifi.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/cursor.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/cerebro.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/camera.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/gamer.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
     </div>
 
 
 
     <!-- =====================================================
-         PNGs DECORATIVOS // DIREITA
+         PNGs // DIREITA
          8 PNGs
     ====================================================== -->
 
@@ -116,50 +150,42 @@
         <img
             src="img/meme2.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/meme3.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
-            src="img/notebook.png.png"
+            src="img/camera.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
-            src="img/logo.png.png"
+            src="img/gamer.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/cafe.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/wifi.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/computador.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
         <img
             src="img/meme.png.png"
             class="decor"
-            alt=""
-        >
+            alt="">
 
     </div>
 
@@ -188,10 +214,11 @@
 
 
     <!-- =====================================================
-         FÓRUM
+         PAINEL PRINCIPAL
     ====================================================== -->
 
     <main class="forum-container">
+
 
 
         <!-- =================================================
@@ -200,50 +227,56 @@
 
         <div class="chat-header">
 
-    <div class="chat-header-left">
 
-        <h2>
-            # CHAT-GERAL
-        </h2>
+            <div class="chat-header-left">
 
-        <p>
-            Comunidade Gabriel Tech
-        </p>
+                <h2>
+                    # CHAT-GERAL
+                </h2>
 
-    </div>
+                <p>
+                    Comunidade Gabriel Tech
+                </p>
+
+            </div>
 
 
-    <div class="chat-user-area">
 
-        <span id="currentUserName">
-            VISITANTE
-        </span>
+            <!-- USUÁRIO / LOGIN / SAIR -->
 
-        <button
-            id="authButton"
-            type="button">
+            <div class="chat-user-area">
 
-            ENTRAR
+                <span id="currentUserName">
+                    VISITANTE
+                </span>
 
-        </button>
+                <button
+                    id="authButton"
+                    type="button">
 
-    </div>
+                    ENTRAR
 
-</div>
+                </button>
+
+            </div>
+
+
+        </div>
 
 
 
         <!-- =================================================
-             MENSAGENS
+             ÁREA DAS MENSAGENS
         ================================================== -->
 
         <div
             class="messages-container"
-            id="messagesContainer"
-        >
+            id="messagesContainer">
 
 
-            <!-- MENSAGEM DO SISTEMA -->
+            <!-- =============================================
+                 MENSAGEM FIXA DO SISTEMA
+            ============================================== -->
 
             <div class="system-message">
 
@@ -259,14 +292,23 @@
             </div>
 
 
+            <!--
+                AS MENSAGENS DO FIREBASE
+                SERÃO CARREGADAS AQUI PELO forum.js
+            -->
+
+
+        </div>
+
+
+
         <!-- =================================================
              PAINEL DE FIGURINHAS
         ================================================== -->
 
         <div
             class="sticker-panel"
-            id="stickerPanel"
-        >
+            id="stickerPanel">
 
 
             <!-- TOPO -->
@@ -277,13 +319,13 @@
                     STICKERS // GABRIEL TECH
                 </span>
 
-
                 <button
                     id="closeStickers"
                     type="button"
-                    title="Fechar"
-                >
+                    title="Fechar">
+
                     X
+
                 </button>
 
             </div>
@@ -298,180 +340,200 @@
                 <button
                     class="sticker"
                     data-sticker="📡 DEU PING!"
-                    type="button"
-                >
+                    type="button">
+
                     📡 DEU PING!
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="🌐 É O DNS"
-                    type="button"
-                >
+                    type="button">
+
                     🌐 É O DNS
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="🔄 REINICIA"
-                    type="button"
-                >
+                    type="button">
+
                     🔄 REINICIA
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="😂 KKKKKKKK"
-                    type="button"
-                >
+                    type="button">
+
                     😂 KKKKKKKK
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="💀 DEU RUIM"
-                    type="button"
-                >
+                    type="button">
+
                     💀 DEU RUIM
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="👀 EU AVISEI"
-                    type="button"
-                >
+                    type="button">
+
                     👀 EU AVISEI
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="☕ PRECISO DE CAFÉ"
-                    type="button"
-                >
+                    type="button">
+
                     ☕ PRECISO DE CAFÉ
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="🔥 BRABO"
-                    type="button"
-                >
+                    type="button">
+
                     🔥 BRABO
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="😐 SUSPEITO"
-                    type="button"
-                >
+                    type="button">
+
                     😐 SUSPEITO
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="👏 MERECE PALMAS"
-                    type="button"
-                >
+                    type="button">
+
                     👏 MERECE PALMAS
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="⚡ FOCO++"
-                    type="button"
-                >
+                    type="button">
+
                     ⚡ FOCO++
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="💜 NEVER GIVE UP"
-                    type="button"
-                >
+                    type="button">
+
                     💜 NEVER GIVE UP
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="🟢 SYSTEM ONLINE"
-                    type="button"
-                >
+                    type="button">
+
                     🟢 SYSTEM ONLINE
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="✅ MISSÃO CUMPRIDA"
-                    type="button"
-                >
+                    type="button">
+
                     ✅ MISSÃO CUMPRIDA
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="💻 NA MINHA MÁQUINA FUNCIONA"
-                    type="button"
-                >
+                    type="button">
+
                     💻 NA MINHA MÁQUINA FUNCIONA
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="ABRE O CMD"
-                    type="button"
-                >
+                    type="button">
+
                     &gt;_ ABRE O CMD
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="🤨 NÃO MEXI EM NADA"
-                    type="button"
-                >
+                    type="button">
+
                     🤨 NÃO MEXI EM NADA
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="🧑‍💻 CONFIA NO TI"
-                    type="button"
-                >
+                    type="button">
+
                     🧑‍💻 CONFIA NO TI
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="📶 CAIU DE NOVO"
-                    type="button"
-                >
+                    type="button">
+
                     📶 CAIU DE NOVO
+
                 </button>
 
 
                 <button
                     class="sticker"
                     data-sticker="🐛 NÃO É BUG"
-                    type="button"
-                >
+                    type="button">
+
                     🐛 NÃO É BUG
+
                 </button>
 
 
@@ -482,7 +544,8 @@
 
 
         <!-- =================================================
-             BARRA DE MENSAGEM
+             BARRA DE DIGITAÇÃO
+             AGORA FICA DEPOIS DAS MENSAGENS
         ================================================== -->
 
         <div class="chat-input-area">
@@ -494,9 +557,10 @@
                 class="emoji-button"
                 id="emojiButton"
                 type="button"
-                title="Emoji"
-            >
+                title="Emoji">
+
                 ☺
+
             </button>
 
 
@@ -507,22 +571,22 @@
                 class="sticker-button"
                 id="openStickers"
                 type="button"
-                title="Figurinhas"
-            >
+                title="Figurinhas">
+
                 ✦
+
             </button>
 
 
 
-            <!-- CAMPO DE TEXTO -->
+            <!-- CAMPO -->
 
             <input
                 type="text"
                 id="messageInput"
                 maxlength="500"
                 autocomplete="off"
-                placeholder="Digite uma mensagem..."
-            >
+                placeholder="Verificando login...">
 
 
 
@@ -531,9 +595,10 @@
             <button
                 class="send-button"
                 id="sendButton"
-                type="button"
-            >
+                type="button">
+
                 ENVIAR →
+
             </button>
 
 
@@ -542,7 +607,7 @@
 
 
         <!-- =================================================
-             RODAPÉ
+             RODAPÉ DO CHAT
         ================================================== -->
 
         <div class="chat-footer">
@@ -563,46 +628,15 @@
 
 
     <!-- =====================================================
-         JAVASCRIPT
-         IMPORTANTE: NÃO APAGAR
+         FIREBASE / JAVASCRIPT
     ====================================================== -->
 
- <script type="module" src="forum.js?v=2"></script>
+    <script
+        type="module"
+        src="forum.js?v=2">
+    </script>
 
 
 </body>
-<!-- =====================================================
-     MENU
-====================================================== -->
-
-<header class="topbar">
-
-    <a href="index.html"
-       class="logo">
-        GABRIEL TECH
-    </a>
-
-    <nav>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="cursos.html">
-            Cursos
-        </a>
-
-        <a href="sobre.html">
-            Sobre
-        </a>
-
-        <a href="forum.html"
-           class="active">
-            Fórum
-        </a>
-
-    </nav>
-
-</header>
 
 </html>
