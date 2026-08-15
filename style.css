@@ -719,3 +719,288 @@ footer {
     }
 
 }
+
+.decor {
+    position: absolute;
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+    z-index: 2;
+    pointer-events: none;
+
+    filter:
+        drop-shadow(0 0 8px rgba(157, 0, 255, 0.7));
+}
+
+
+/* CURSOR */
+
+.decor-cursor {
+    width: 75px;
+}
+
+
+/* WIFI */
+
+.decor-wifi {
+    width: 65px;
+}
+
+
+/* CAFÉ */
+
+.decor-cafe {
+    width: 65px;
+}
+
+
+/* COMPUTADOR */
+
+.decor-computador {
+    width: 80px;
+}
+
+
+/* NOTEBOOK */
+
+.decor-notebook {
+    width: 80px;
+}
+
+
+/* MEME */
+
+.decor-meme {
+    width: 70px;
+}
+
+/* =========================================
+   HOME // FIGURINHAS
+========================================= */
+.home-sticker {
+    position: fixed;
+
+    width: 55px;
+    height: auto;
+
+    z-index: 2;
+
+    opacity: .72;
+
+    pointer-events: none;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 7px rgba(157, 0, 255, .65));
+
+    animation:
+        homeStickerFloat 5s ease-in-out infinite;
+}
+
+
+/* LADO ESQUERDO */
+
+.sticker-1 {
+    left: 25px;
+    top: 150px;
+}
+
+.sticker-2 {
+    left: 25px;
+    top: 360px;
+}
+
+.sticker-3 {
+    left: 25px;
+    top: 570px;
+}
+
+
+/* LADO DIREITO */
+
+.sticker-4 {
+    right: 25px;
+    top: 150px;
+}
+
+.sticker-5 {
+    right: 25px;
+    top: 360px;
+}
+
+.sticker-6 {
+    right: 25px;
+    top: 570px;
+}
+
+
+/* FLUTUAÇÃO */
+
+@keyframes homeStickerFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .home-sticker {
+        display: none;
+    }
+
+}
+
+/* =========================================
+   HOME // CÓDIGOS NEON
+========================================= */
+
+.home-code {
+    position: absolute;
+
+    z-index: 1;
+
+    width: 230px;
+
+    font-family: 'Courier New', monospace;
+
+    font-size: 22px;
+
+    line-height: 1.75;
+
+    color: #888;
+
+    opacity: .24;
+
+    pointer-events: none;
+
+    text-shadow:
+        0 0 6px rgba(157,0,255,.35);
+
+    animation:
+        codeFloatHome 7s ease-in-out infinite;
+}
+
+
+.home-code .indent {
+    padding-left: 20px;
+}
+
+
+.home-code .purple {
+    color: #d16cff;
+}
+
+
+.home-code .green {
+    color: #5fff88;
+}
+
+
+.home-code .red {
+    color: #ff5575;
+}
+
+
+.home-code .comment {
+    color: #666;
+}
+
+
+/* POSIÇÕES */
+
+.code-01 {
+    top: 220px;
+    left: 2%;
+}
+
+
+.code-02 {
+    top: 600px;
+    right: 2%;
+}
+
+
+.code-03 {
+    top: 960px;
+    left: 2%;
+}
+
+
+.code-04 {
+    top: 1280px;
+    right: 2%;
+}
+
+
+.code-05 {
+    top: 1580px;
+    left: 3%;
+}
+
+
+.code-06 {
+    top: 1880px;
+    right: 3%;
+}
+
+
+.code-07 {
+    top: 2180px;
+    left: 3%;
+}
+
+
+.code-08 {
+    top: 2480px;
+    right: 3%;
+}
+
+
+@keyframes codeFloatHome {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 1100px) {
+
+    .home-code {
+        opacity: .10;
+    }
+
+    .home-sticker {
+        opacity: .30;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .home-code,
+    .home-sticker {
+        display: none;
+    }
+
+}

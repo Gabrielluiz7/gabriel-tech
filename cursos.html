@@ -10,12 +10,26 @@
 
     <title>Gabriel Tech | Cursos</title>
 
-    <link rel="icon"
-          type="image/png"
-          href="img/favicon.png">
+
+    <!-- =========================================
+         FAVICON
+    ========================================== -->
+<link rel="icon"
+      type="image/png"
+      href="./img/favicon.png.png">
+
+<link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- =========================================
+         CSS
+    ========================================== -->
 
     <link rel="stylesheet"
           href="cursos.css">
+
+
+    <!-- =========================================
+         FONTES
+    ========================================== -->
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
           rel="stylesheet">
@@ -25,13 +39,19 @@
 
 <body>
 
-    <!-- FUNDO -->
+
+    <!-- =========================================
+         FUNDO
+    ========================================== -->
 
     <div class="background-glow"></div>
+
     <div class="scanlines"></div>
 
 
-    <!-- MENU -->
+    <!-- =========================================
+         MENU
+    ========================================== -->
 
     <header class="topbar">
 
@@ -41,6 +61,7 @@
             GABRIEL TECH
 
         </a>
+
 
         <nav>
 
@@ -66,70 +87,77 @@
     </header>
 
 
-    <!-- =========================
+    <!-- =========================================
          PNGs DECORATIVOS
-    ========================== -->
+    ========================================== -->
 
-    <img
-        src="img/cafe.png.png"
-        class="decor decor-cafe"
-        alt="">
+    <!-- PNGs LADO ESQUERDO -->
+<img src="img/cafe.png.png" class="curso-decor curso-left-1" alt="">
+<img src="img/computador.png.png" class="curso-decor curso-left-2" alt="">
+<img src="img/meme.png.png" class="curso-decor curso-left-3" alt="">
 
-    <img
-        src="img/computador.png.png"
-        class="decor decor-computador"
-        alt="">
-
-    <img
-        src="img/notebook .png.png"
-        class="decor decor-notebook"
-        alt="">
-
-    <img
-        src="img/wifi.png.png"
-        class="decor decor-wifi"
-        alt="">
-
-    <img
-        src="img/meme.png.png"
-        class="decor decor-meme"
-        alt="">
-
-    <img
-        src="img/cerebro.png.png"
-        class="decor decor-cerebro"
-        alt="">
+<!-- PNGs LADO DIREITO -->
+<img src="img/wifi.png.png" class="curso-decor curso-right-1" alt="">
+<img src="img/gamer.png.png" class="curso-decor curso-right-2" alt="">
+<img src="img/meme2.png.png" class="curso-decor curso-right-3" alt="">
 
 
-    <!-- =========================
-         CÓDIGOS DECORATIVOS
-    ========================== -->
+    <!-- =========================================
+         CÓDIGO ESQUERDO
+    ========================================== -->
 
     <div class="side-code code-left">
 
         <p>
-            <span class="purple">while</span> (alive) {
+
+            <span class="purple">
+                while
+            </span>
+
+            (alive) {
+
         </p>
+
 
         <p class="indent">
-            <span class="green">learn</span>();
+
+            <span class="green">
+                learn
+            </span>();
+
         </p>
+
 
         <p class="indent">
-            <span class="green">practice</span>();
+
+            <span class="green">
+                practice
+            </span>();
+
         </p>
+
 
         <p class="indent">
-            <span class="green">evolve</span>();
+
+            <span class="green">
+                evolve
+            </span>();
+
         </p>
 
-        <p>}</p>
+
+        <p>
+            }
+        </p>
+
 
         <br>
+
 
         <p class="comment">
             // Nunca desista.
         </p>
+
 
         <p class="comment">
             // Never give up.
@@ -138,43 +166,69 @@
     </div>
 
 
+    <!-- =========================================
+         CÓDIGO DIREITO
+    ========================================== -->
+
     <div class="side-code code-right">
 
         <p>
             knowledge++;
         </p>
 
+
         <p>
             experience++;
         </p>
 
-        <p>
-            focus =
-            <span class="green">true</span>;
-        </p>
 
         <p>
-            giveUp =
-            <span class="red">false</span>;
+
+            focus =
+
+            <span class="green">
+                true
+            </span>;
+
         </p>
+
+
+        <p>
+
+            giveUp =
+
+            <span class="red">
+                false
+            </span>;
+
+        </p>
+
 
         <br>
+
 
         <p class="comment">
             // ONE STEP AT A TIME.
         </p>
 
+
+        <p class="comment">
+            // KEEP GOING.
+        </p>
+
     </div>
 
 
-    <!-- =========================
+    <!-- =========================================
          CONTEÚDO PRINCIPAL
-    ========================== -->
+    ========================================== -->
 
     <main class="courses-wrapper">
 
 
-        <!-- CABEÇALHO -->
+        <!-- =====================================
+             CABEÇALHO
+        ====================================== -->
 
         <section class="courses-header">
 
@@ -182,9 +236,11 @@
                 GABRIEL TECH // COURSES
             </span>
 
+
             <h1>
                 VIDEOAULAS
             </h1>
+
 
             <p>
                 Conteúdo direto, prático e sem enrolação.
@@ -193,21 +249,26 @@
         </section>
 
 
-        <!-- =========================
+        <!-- =====================================
              PAINEL DAS AULAS
-        ========================== -->
+        ====================================== -->
 
         <section class="course-panel">
 
 
-            <!-- LATERAL -->
+            <!-- =================================
+                 LISTA DE AULAS
+            ================================== -->
 
             <aside class="lesson-sidebar">
+
 
                 <span class="sidebar-title">
                     AULAS
                 </span>
 
+
+                <!-- AULA 01 -->
 
                 <button
                     class="lesson active"
@@ -222,6 +283,8 @@
                 </button>
 
 
+                <!-- AULA 02 -->
+
                 <button
                     class="lesson"
                     data-lesson="2">
@@ -234,6 +297,8 @@
 
                 </button>
 
+
+                <!-- AULA 03 -->
 
                 <button
                     class="lesson"
@@ -248,6 +313,8 @@
                 </button>
 
 
+                <!-- AULA 04 -->
+
                 <button
                     class="lesson"
                     data-lesson="4">
@@ -260,6 +327,8 @@
 
                 </button>
 
+
+                <!-- AULA 05 -->
 
                 <button
                     class="lesson"
@@ -274,6 +343,8 @@
                 </button>
 
 
+                <!-- AULA 06 -->
+
                 <button
                     class="lesson"
                     data-lesson="6">
@@ -286,6 +357,8 @@
 
                 </button>
 
+
+                <!-- AULA 07 -->
 
                 <button
                     class="lesson"
@@ -300,6 +373,8 @@
                 </button>
 
 
+                <!-- AULA 08 -->
+
                 <button
                     class="lesson"
                     data-lesson="8">
@@ -312,10 +387,13 @@
 
                 </button>
 
+
             </aside>
 
 
-            <!-- CONTEÚDO DA AULA -->
+            <!-- =================================
+                 CONTEÚDO DA AULA
+            ================================== -->
 
             <section class="lesson-content">
 
@@ -324,11 +402,13 @@
 
                 <div class="lesson-top">
 
+
                     <div>
 
                         <span id="lessonNumber">
                             AULA 01
                         </span>
+
 
                         <h2 id="lessonTitle">
                             NOVA AULA EM BREVE
@@ -341,62 +421,85 @@
                         ● ONLINE
                     </div>
 
+
                 </div>
 
 
-                <!-- =========================
+                <!-- =================================
                      ÁREA DO VÍDEO
-                ========================== -->
+                ================================== -->
 
                 <div class="lesson-video">
+
+
+                    <!--
+                        Enquanto não existir vídeo,
+                        essa tela aparece.
+                    -->
 
                     <div
                         class="video-placeholder"
                         id="videoPlaceholder">
 
+
                         <span>
                             &gt;_
                         </span>
+
 
                         <h3>
                             AULA EM PRODUÇÃO
                         </h3>
 
+
                         <p>
-                            O próximo conteúdo será disponibilizado em breve.
+                            O próximo conteúdo será
+                            disponibilizado em breve.
                         </p>
+
 
                     </div>
 
+
+                    <!--
+                        Quando gravarmos a aula,
+                        o JavaScript mostrará esse player.
+                    -->
 
                     <video
                         id="lessonVideo"
                         controls
                         preload="metadata"
+                        playsinline
                         style="display: none;">
+
 
                         <source
                             id="lessonVideoSource"
                             src=""
                             type="video/mp4">
 
-                        Seu navegador não suporta reprodução de vídeo.
+
+                        Seu navegador não suporta
+                        reprodução de vídeo.
+
 
                     </video>
+
 
                 </div>
 
 
-                <!-- =========================
+                <!-- =================================
                      DESCRIÇÃO
-                ========================== -->
+                ================================== -->
 
                 <div class="lesson-description">
+
 
                     <p id="lessonDescription">
 
                         Esta aula ainda está sendo preparada.
-
                         Assim que o conteúdo estiver pronto,
                         ele ficará disponível aqui.
 
@@ -405,42 +508,51 @@
 
                     <div class="lesson-code">
 
+
                         <span>
-                            >
+                            &gt;
                         </span>
 
                         focus();
 
+
                         <br>
 
+
                         <span>
-                            >
+                            &gt;
                         </span>
 
                         practice();
 
+
                         <br>
 
+
                         <span>
-                            >
+                            &gt;
                         </span>
 
                         keepGoing();
 
+
                     </div>
+
 
                 </div>
 
 
-                <!-- =========================
+                <!-- =================================
                      NAVEGAÇÃO
-                ========================== -->
+                ================================== -->
 
                 <div class="lesson-navigation">
 
+
                     <button
                         class="previous"
-                        id="previousLesson">
+                        id="previousLesson"
+                        type="button">
 
                         ← AULA ANTERIOR
 
@@ -449,22 +561,49 @@
 
                     <button
                         class="next"
-                        id="nextLesson">
+                        id="nextLesson"
+                        type="button">
 
                         PRÓXIMA AULA →
 
                     </button>
 
+
                 </div>
+
 
             </section>
 
+
         </section>
+
 
     </main>
 
 
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <span>
+            GABRIEL TECH // KEEP LEARNING
+        </span>
+
+        <p>
+            © 2026 Gabriel Tech
+        </p>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
     <script src="cursos.js"></script>
+
 
 </body>
 

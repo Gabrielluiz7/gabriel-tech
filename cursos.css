@@ -696,3 +696,88 @@ body {
     }
 
 }
+/* =========================================
+   CURSOS // PNGs EM FILEIRA
+========================================= */
+
+.curso-decor {
+    position: fixed;
+
+    width: 55px;
+    height: auto;
+
+    object-fit: contain;
+
+    opacity: .75;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(0 0 7px rgba(157, 0, 255, .65));
+
+    animation:
+        cursoFloat 5s ease-in-out infinite;
+}
+
+
+/* ESQUERDA */
+
+.curso-left-1 {
+    left: 30px;
+    top: 180px;
+}
+
+.curso-left-2 {
+    left: 30px;
+    top: 410px;
+}
+
+.curso-left-3 {
+    left: 30px;
+    top: 640px;
+}
+
+
+/* DIREITA */
+
+.curso-right-1 {
+    right: 30px;
+    top: 180px;
+}
+
+.curso-right-2 {
+    right: 30px;
+    top: 410px;
+}
+
+.curso-right-3 {
+    right: 30px;
+    top: 640px;
+}
+
+
+/* FLUTUAÇÃO */
+
+@keyframes cursoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* TELAS MENORES */
+
+@media (max-width: 900px) {
+
+    .curso-decor {
+        display: none;
+    }
+}

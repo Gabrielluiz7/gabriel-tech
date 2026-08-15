@@ -10,12 +10,16 @@
 
     <title>Gabriel Tech | Começar</title>
 
-    <link rel="icon"
-          type="image/png"
-          href="img/favicon.png">
+
+    <!-- FAVICON -->
+<link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- CSS -->
 
     <link rel="stylesheet"
           href="painel.css">
+
+
+    <!-- FONTES -->
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
           rel="stylesheet">
@@ -26,33 +30,45 @@
 <body>
 
 
-    <!-- FUNDO -->
+    <!-- =========================================
+         FUNDO
+    ========================================== -->
 
     <div class="background-glow"></div>
+
     <div class="scanlines"></div>
 
 
-    <!-- =========================
+    <!-- =========================================
          PNGs DECORATIVOS
-    ========================== -->
+    ========================================== -->
+
+
+    <!-- CURSOR -->
 
     <img
         src="img/cursor.png.png"
         class="decor cursor"
-        alt="Cursor neon">
+        alt="">
 
+
+    <!-- WI-FI -->
 
     <img
         src="img/wifi.png.png"
         class="decor wifi"
-        alt="Wi-Fi">
+        alt="">
 
+
+    <!-- COMPUTADOR -->
 
     <img
         src="img/computador.png.png"
         class="decor computador"
-        alt="Computador">
+        alt="">
 
+
+    <!-- MEME -->
 
     <img
         src="img/meme.png.png"
@@ -60,84 +76,117 @@
         alt="">
 
 
-    <!-- =========================
-         CÓDIGOS
-    ========================== -->
+    <!-- =========================================
+         CÓDIGO ESQUERDO
+    ========================================== -->
 
     <div class="code-box code-left">
 
         <p>
-            <span class="red">if</span>
-            <span class="blue">(Mood == </span>
-            <span class="green">Happy</span>
-            <span class="blue">)</span>
+
+            <span class="purple">
+                while
+            </span>
+
+            (alive) {
+
         </p>
+
+
+        <p class="indent">
+
+            <span class="green">
+                keepGoing
+            </span>();
+
+        </p>
+
+
+        <p class="indent">
+
+            <span class="green">
+                keepLearning
+            </span>();
+
+        </p>
+
 
         <p>
-            <span class="white">{</span>
+            }
         </p>
 
-        <p class="indent">
-            <span class="red">Food</span>
-            <span class="white"> = </span>
-            <span class="green">Pizza</span>
-            <span class="white">;</span>
+
+        <br>
+
+
+        <p class="comment">
+            // Nunca desista.
         </p>
 
-        <p class="indent">
-            <span class="red">Drink</span>
-            <span class="white"> = </span>
-            <span class="green">Café</span>
-            <span class="white">;</span>
-        </p>
 
-        <p class="indent">
-            <span class="red">Music</span>
-            <span class="white"> = </span>
-            <span class="green">Heavy Metal</span>
-            <span class="white">;</span>
-        </p>
-
-        <p>
-            <span class="white">}</span>
+        <p class="comment">
+            // Um passo de cada vez.
         </p>
 
     </div>
 
 
+    <!-- =========================================
+         CÓDIGO DIREITO
+    ========================================== -->
+
     <div class="code-box code-right">
 
         <p>
+
+            failure =
+
+            <span class="purple">
+                lesson
+            </span>;
+
+        </p>
+
+
+        <p>
+            experience++;
+        </p>
+
+
+        <p>
+            knowledge++;
+        </p>
+
+
+        <p>
+
             focus =
-            <span class="green">true</span>;
+
+            <span class="green">
+                true
+            </span>;
+
         </p>
 
+
         <p>
+
             giveUp =
-            <span class="red">false</span>;
+
+            <span class="red">
+                false
+            </span>;
+
         </p>
+
 
         <br>
 
-        <p>
-            <span class="purple">while</span> (alive) {
+
+        <p class="comment">
+            // KEEP GOING.
         </p>
 
-        <p class="indent">
-            learn();
-        </p>
-
-        <p class="indent">
-            practice();
-        </p>
-
-        <p class="indent">
-            evolve();
-        </p>
-
-        <p>}</p>
-
-        <br>
 
         <p class="comment">
             // NEVER GIVE UP.
@@ -146,74 +195,93 @@
     </div>
 
 
-    <!-- =========================
+    <!-- =========================================
          CONTEÚDO PRINCIPAL
-    ========================== -->
+    ========================================== -->
 
     <main class="video-area">
 
-        <div class="page-title">
+
+        <!-- TÍTULO -->
+
+        <section class="page-title">
 
             <span>
                 GABRIEL TECH // START
             </span>
 
+
             <h1>
-                INTRODUÇÃO
+                BEM-VINDO.
             </h1>
 
+
             <p>
-                Comece sua jornada.
+                Antes de começar, conheça um pouco
+                sobre a Gabriel Tech.
             </p>
+
+        </section>
+
+
+        <!-- =====================================
+             PLAYER
+        ====================================== -->
+
+        <div class="video-frame">
+
+            <video
+                controls
+                preload="metadata"
+                playsinline>
+
+                <source
+                    src="video/introducao.mp4.mp4"
+                    type="video/mp4">
+
+                Seu navegador não suporta reprodução de vídeo.
+
+            </video>
 
         </div>
 
 
-        <!-- PLAYER -->
+        <!-- =====================================
+             INFORMAÇÕES
+        ====================================== -->
 
-     <div class="video-frame">
-
-    <video controls preload="metadata">
-
-        <source
-            src="video/introducao.mp4.mp4"
-            type="video/mp4">
-
-        Seu navegador não suporta reprodução de vídeo.
-
-    </video>
-
-</div>
-        <!-- TEXTO ABAIXO -->
-
-        <div class="lesson-info">
+        <section class="lesson-info">
 
             <span>
-                START // 01
+                00 // INTRODUÇÃO
             </span>
 
+
             <h2>
-                BEM-VINDO À GABRIEL TECH
+                CONHEÇA A GABRIEL TECH
             </h2>
 
+
             <p>
-                Foco. Persistência. Evolução.
+                Uma breve introdução antes de começarmos
+                nossa jornada pela tecnologia.
             </p>
 
-        </div>
 
+            <!-- BOTÃO -->
 
-        <a href="cursos.html"
-           class="courses-button">
+            <a href="cursos.html"
+               class="courses-button">
 
-            IR PARA OS CURSOS →
+                IR PARA OS CURSOS →
 
-        </a>
+            </a>
+
+        </section>
+
 
     </main>
 
-
-    <script src="script.js"></script>
 
 </body>
 
