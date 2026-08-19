@@ -692,3 +692,37 @@ body {
     }
 
 }
+/* =========================================================
+   ESQUECI MINHA SENHA
+========================================================= */
+
+.forgot-password {
+    align-self: flex-end;
+
+    margin-top: 2px;
+
+    padding: 4px 0;
+
+    color: rgba(210, 103, 255, .75);
+
+    background: transparent;
+
+    border: none;
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.forgot-password:hover {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 8px #9d00ff;
+}

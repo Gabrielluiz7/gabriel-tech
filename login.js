@@ -1,10 +1,11 @@
 // ==========================================================
 // GABRIEL TECH // LOGIN FIREBASE
+// LOGIN + CADASTRO + RECUPERAÇÃO DE SENHA
 // ==========================================================
 
 
 // ==========================================================
-// FIREBASE
+// IMPORTS FIREBASE
 // ==========================================================
 
 import { initializeApp } from
@@ -14,7 +15,8 @@ import {
     getAuth,
     signInWithEmailAndPassword,
     createUserWithEmailAndPassword,
-    updateProfile
+    updateProfile,
+    sendPasswordResetEmail
 } from
     "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
 
@@ -49,16 +51,22 @@ const firebaseConfig = {
 
 
 // ==========================================================
-// INICIALIZAR
+// INICIALIZAÇÃO
 // ==========================================================
 
-const app = initializeApp(firebaseConfig);
+const app =
+    initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
+const auth =
+    getAuth(app);
+
+
+// Deixa os e-mails do Firebase em português quando possível
+auth.languageCode = "pt-BR";
 
 
 // ==========================================================
-// ELEMENTOS
+// ELEMENTOS DO LOGIN
 // ==========================================================
 
 const loginForm =
@@ -90,31 +98,45 @@ const showRegister =
 const backToLogin =
     document.getElementById("backToLogin");
 
+const forgotPassword =
+    document.getElementById("forgotPassword");
+
 const authMessage =
     document.getElementById("authMessage");
 
 
 // ==========================================================
-// MENSAGENS
+// MENSAGENS DA INTERFACE
 // ==========================================================
 
-function showMessage(text, type = "error") {
+function showMessage(
+    text,
+    type = "error"
+) {
 
-    authMessage.textContent = text;
+    if (!authMessage) {
+        return;
+    }
+
+    authMessage.textContent =
+        text;
 
     authMessage.className =
         "auth-message " + type;
-
 }
 
 
 function clearMessage() {
 
-    authMessage.textContent = "";
+    if (!authMessage) {
+        return;
+    }
+
+    authMessage.textContent =
+        "";
 
     authMessage.className =
         "auth-message";
-
 }
 
 
@@ -122,250 +144,378 @@ function clearMessage() {
 // ABRIR CADASTRO
 // ==========================================================
 
-showRegister.addEventListener("click", () => {
+if (
+    showRegister &&
+    loginForm &&
+    registerForm
+) {
 
-    clearMessage();
+    showRegister.addEventListener(
+        "click",
 
-    loginForm.style.display = "none";
+        () => {
 
-    showRegister.style.display = "none";
+            clearMessage();
 
-    registerForm.classList.add("active");
+            loginForm.style.display =
+                "none";
 
-});
+            showRegister.style.display =
+                "none";
+
+            registerForm.classList.add(
+                "active"
+            );
+
+        }
+    );
+}
 
 
 // ==========================================================
-// VOLTAR PARA LOGIN
+// VOLTAR AO LOGIN
 // ==========================================================
 
-backToLogin.addEventListener("click", () => {
+if (
+    backToLogin &&
+    loginForm &&
+    registerForm &&
+    showRegister
+) {
 
-    clearMessage();
+    backToLogin.addEventListener(
+        "click",
 
-    registerForm.classList.remove("active");
+        () => {
 
-    loginForm.style.display = "flex";
+            clearMessage();
 
-    showRegister.style.display = "block";
+            registerForm.classList.remove(
+                "active"
+            );
 
-});
+            loginForm.style.display =
+                "flex";
+
+            showRegister.style.display =
+                "block";
+
+        }
+    );
+}
 
 
 // ==========================================================
 // LOGIN
 // ==========================================================
 
-loginForm.addEventListener(
+if (
+    loginForm &&
+    loginEmail &&
+    loginPassword
+) {
 
-    "submit",
+    loginForm.addEventListener(
 
-    async (event) => {
+        "submit",
 
-        event.preventDefault();
+        async (event) => {
 
-        clearMessage();
+            event.preventDefault();
 
-
-        const email =
-            loginEmail.value.trim();
-
-        const password =
-            loginPassword.value;
-
-
-        if (!email || !password) {
-
-            showMessage(
-                "Preencha o e-mail e a senha."
-            );
-
-            return;
-        }
+            clearMessage();
 
 
-        showMessage(
-            "Conectando...",
-            "success"
-        );
+            const email =
+                loginEmail.value.trim();
+
+            const password =
+                loginPassword.value;
 
 
-        try {
+            if (
+                !email ||
+                !password
+            ) {
 
-            await signInWithEmailAndPassword(
-                auth,
-                email,
-                password
-            );
+                showMessage(
+                    "Preencha o e-mail e a senha."
+                );
+
+                return;
+            }
 
 
             showMessage(
-                "Login realizado! Entrando no Fórum...",
+                "Conectando...",
                 "success"
             );
 
 
-            setTimeout(() => {
+            try {
 
-                window.location.href =
-                    "forum.html";
-
-            }, 700);
-
-        }
-
-        catch (error) {
-
-            console.error(
-                "Erro no login:",
-                error
-            );
-
-
-            handleFirebaseError(error);
-
-        }
-
-    }
-);
-
-
-// ==========================================================
-// CRIAR CONTA
-// ==========================================================
-
-registerForm.addEventListener(
-
-    "submit",
-
-    async (event) => {
-
-        event.preventDefault();
-
-        clearMessage();
-
-
-        const name =
-            registerName.value.trim();
-
-        const email =
-            registerEmail.value.trim();
-
-        const password =
-            registerPassword.value;
-
-
-        if (!name || !email || !password) {
-
-            showMessage(
-                "Preencha todos os campos."
-            );
-
-            return;
-        }
-
-
-        if (name.length < 2) {
-
-            showMessage(
-                "Digite um nome válido."
-            );
-
-            return;
-        }
-
-
-        if (password.length < 6) {
-
-            showMessage(
-                "A senha precisa ter pelo menos 6 caracteres."
-            );
-
-            return;
-        }
-
-
-        showMessage(
-            "Criando sua conta...",
-            "success"
-        );
-
-
-        try {
-
-            // CRIA USUÁRIO
-
-            const userCredential =
-                await createUserWithEmailAndPassword(
+                await signInWithEmailAndPassword(
                     auth,
                     email,
                     password
                 );
 
 
-            // SALVA NOME NO PERFIL
+                showMessage(
+                    "Login realizado! Entrando no Fórum...",
+                    "success"
+                );
 
-            await updateProfile(
-                userCredential.user,
-                {
-                    displayName: name
-                }
-            );
+
+                setTimeout(
+                    () => {
+
+                        window.location.href =
+                            "forum.html";
+
+                    },
+                    700
+                );
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    "Erro no login:",
+                    error
+                );
+
+                handleFirebaseError(
+                    error
+                );
+            }
+
+        }
+    );
+}
+
+
+// ==========================================================
+// CRIAR CONTA
+// ==========================================================
+
+if (
+    registerForm &&
+    registerName &&
+    registerEmail &&
+    registerPassword
+) {
+
+    registerForm.addEventListener(
+
+        "submit",
+
+        async (event) => {
+
+            event.preventDefault();
+
+            clearMessage();
+
+
+            const name =
+                registerName.value.trim();
+
+            const email =
+                registerEmail.value.trim();
+
+            const password =
+                registerPassword.value;
+
+
+            if (
+                !name ||
+                !email ||
+                !password
+            ) {
+
+                showMessage(
+                    "Preencha todos os campos."
+                );
+
+                return;
+            }
+
+
+            if (name.length < 2) {
+
+                showMessage(
+                    "Digite um nome válido."
+                );
+
+                return;
+            }
+
+
+            if (password.length < 6) {
+
+                showMessage(
+                    "A senha precisa ter pelo menos 6 caracteres."
+                );
+
+                return;
+            }
 
 
             showMessage(
-                "Conta criada! Bem-vindo à Gabriel Tech.",
+                "Criando sua conta...",
                 "success"
             );
 
 
-            setTimeout(() => {
+            try {
 
-                window.location.href =
-                    "forum.html";
+                const userCredential =
+                    await createUserWithEmailAndPassword(
+                        auth,
+                        email,
+                        password
+                    );
 
-            }, 900);
+
+                await updateProfile(
+                    userCredential.user,
+                    {
+                        displayName:
+                            name
+                    }
+                );
+
+
+                showMessage(
+                    "Conta criada! Bem-vindo à Gabriel Tech.",
+                    "success"
+                );
+
+
+                setTimeout(
+                    () => {
+
+                        window.location.href =
+                            "forum.html";
+
+                    },
+                    900
+                );
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    "Erro ao criar conta:",
+                    error
+                );
+
+                handleFirebaseError(
+                    error
+                );
+            }
 
         }
+    );
+}
 
-        catch (error) {
 
-            console.error(
-                "Erro ao criar conta:",
-                error
+// ==========================================================
+// ESQUECI MINHA SENHA
+// ==========================================================
+
+if (
+    forgotPassword &&
+    loginEmail
+) {
+
+    forgotPassword.addEventListener(
+
+        "click",
+
+        async () => {
+
+            clearMessage();
+
+
+            const email =
+                loginEmail.value.trim();
+
+
+            if (!email) {
+
+                showMessage(
+                    "Digite seu e-mail primeiro."
+                );
+
+                loginEmail.focus();
+
+                return;
+            }
+
+
+            showMessage(
+                "Enviando e-mail de recuperação...",
+                "success"
             );
 
 
-            handleFirebaseError(error);
+            try {
+
+                await sendPasswordResetEmail(
+                    auth,
+                    email
+                );
+
+
+                showMessage(
+                    "E-mail enviado! Confira sua caixa de entrada e o spam.",
+                    "success"
+                );
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    "Erro ao recuperar senha:",
+                    error
+                );
+
+
+                handleFirebaseError(
+                    error,
+                    "reset"
+                );
+            }
 
         }
-
-    }
-);
+    );
+}
 
 
 // ==========================================================
 // TRADUZIR ERROS DO FIREBASE
 // ==========================================================
 
-function handleFirebaseError(error) {
+function handleFirebaseError(
+    error,
+    context = "auth"
+) {
 
     switch (error.code) {
 
+
+        // --------------------------------------------------
+        // CADASTRO
+        // --------------------------------------------------
 
         case "auth/email-already-in-use":
 
             showMessage(
                 "Este e-mail já possui uma conta."
-            );
-
-            break;
-
-
-        case "auth/invalid-email":
-
-            showMessage(
-                "Digite um endereço de e-mail válido."
             );
 
             break;
@@ -379,6 +529,10 @@ function handleFirebaseError(error) {
 
             break;
 
+
+        // --------------------------------------------------
+        // LOGIN
+        // --------------------------------------------------
 
         case "auth/invalid-credential":
 
@@ -398,6 +552,23 @@ function handleFirebaseError(error) {
             break;
 
 
+        // --------------------------------------------------
+        // E-MAIL
+        // --------------------------------------------------
+
+        case "auth/invalid-email":
+
+            showMessage(
+                "Digite um endereço de e-mail válido."
+            );
+
+            break;
+
+
+        // --------------------------------------------------
+        // SEGURANÇA
+        // --------------------------------------------------
+
         case "auth/too-many-requests":
 
             showMessage(
@@ -406,6 +577,10 @@ function handleFirebaseError(error) {
 
             break;
 
+
+        // --------------------------------------------------
+        // CONEXÃO
+        // --------------------------------------------------
 
         case "auth/network-request-failed":
 
@@ -416,18 +591,36 @@ function handleFirebaseError(error) {
             break;
 
 
+        // --------------------------------------------------
+        // PADRÃO
+        // --------------------------------------------------
+
         default:
 
-            showMessage(
-                "Não foi possível concluir. Tente novamente."
-            );
+            if (context === "reset") {
+
+                showMessage(
+                    "Não foi possível enviar o e-mail de recuperação."
+                );
+
+            }
+
+            else {
+
+                showMessage(
+                    "Não foi possível concluir. Tente novamente."
+                );
+
+            }
 
             break;
-
     }
-
 }
 
+
+// ==========================================================
+// INICIALIZAÇÃO
+// ==========================================================
 
 console.log(
     "Gabriel Tech // Authentication iniciado."

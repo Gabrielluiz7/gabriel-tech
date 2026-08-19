@@ -1004,3 +1004,106 @@ footer {
     }
 
 }
+/* =========================================
+   GALERIA FLUTUANTE // HOME
+========================================= */
+
+.floating-gallery {
+    position: relative;
+
+    width: 100%;
+    min-height: 620px;
+
+    margin-top: 30px;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+/* IMAGENS */
+
+.floating-art {
+    position: absolute;
+
+    width: 500px;
+    max-width: 38vw;
+
+    height: auto;
+
+    border-radius: 8px;
+
+    opacity: .78;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(0 0 15px rgba(157, 0, 255, .32));
+
+    animation:
+        galleryFloat 7s ease-in-out infinite;
+}
+
+
+/* ESQUERDA */
+
+.floating-art-left {
+    left: 13%;
+    top: 90px;
+
+    transform: rotate(-2deg);
+}
+
+
+/* DIREITA */
+
+.floating-art-right {
+    right: 13%;
+    top: 210px;
+
+    transform: rotate(2deg);
+
+    animation-delay: -3.5s;
+}
+
+
+/* FLUTUAÇÃO */
+
+@keyframes galleryFloat {
+
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -14px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .floating-gallery {
+        min-height: 700px;
+    }
+
+    .floating-art {
+        width: 78%;
+        max-width: none;
+    }
+
+    .floating-art-left {
+        left: 11%;
+        top: 60px;
+    }
+
+    .floating-art-right {
+        right: 11%;
+        top: 370px;
+    }
+
+}
