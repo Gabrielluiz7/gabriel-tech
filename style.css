@@ -874,7 +874,7 @@ footer {
 
     font-family: 'Courier New', monospace;
 
-    font-size: 22px;
+    font-size: 12px;
 
     line-height: 1.75;
 
@@ -893,7 +893,7 @@ footer {
 
 
 .home-code .indent {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 
